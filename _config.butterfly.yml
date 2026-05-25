@@ -30,7 +30,7 @@ menu:
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
   theme: light
-  macStyle: false
+  macStyle: true
   # Code block height limit (unit: px)
   height_limit: false
   word_wrap: false
@@ -46,8 +46,8 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
-  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
+  fab fa-github: https://github.com/mcenahle/ || Github || '#24292e'
+  fas fa-envelope: mailto:hi@mcenahle.page || Email || '#4a7dbe'
 
 # --------------------------------------
 # Image Settings
@@ -221,10 +221,10 @@ reward:
 # Post edit
 # Easily browse and edit blog source code online.
 post_edit:
-  enable: false
+  enable: true
   # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
-  url:
+  url: https://github.com/mcenahle/blog/edit/main/source/
 
 # Related Articles
 related_post:
@@ -289,7 +289,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/mcenahle/
   card_announcement:
     enable: true
     content: This is my Blog
@@ -393,7 +393,7 @@ darkmode:
   end:
 
 # Show scroll percent in scroll-to-top button
-rightside_scroll_percent: false
+rightside_scroll_percent: true
 
 # Don't modify the following settings unless you know how they work
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
@@ -429,7 +429,7 @@ copy:
 
 # Need to install the hexo-wordcount plugin
 wordcount:
-  enable: false
+  enable: true
   # Display the word count of the article in post meta
   post_wordcount: true
   # Display the time to read the article in post meta
@@ -616,7 +616,7 @@ facebook_comments:
   pageSize: 10
   # Choose: social / time / reverse_time
   order_by: social
-  lang: en_US
+  lang: zh_CN
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -809,7 +809,7 @@ display_mode: light
 
 # Configuration for beautifying the content of the article
 beautify:
-  enable: false
+  enable: true
   # Specify the field to beautify (site or post)
   field: post
   # Specify the icon to be used as a prefix for the title, such as '\f0c1'
@@ -862,8 +862,8 @@ canvas_ribbon:
 
 # Fluttering Ribbon
 canvas_fluttering_ribbon:
-  enable: false
-  mobile: false
+  enable: true
+  mobile: true
 
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
@@ -984,7 +984,7 @@ note:
 
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   # Exclude the specified pages from pjax, such as '/music/'
   exclude:
     # - /xxxxxx/
