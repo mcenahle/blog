@@ -27,3 +27,74 @@ jobs:
 
       - name: Build
         run: pnpm run build
+
+  compatibility:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20, 22, 24]
+
+    continue-on-error: true
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6.0.5
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Test build
+        run: pnpm run build
+
+  stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6.0.5
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        run: pnpm run build
+
+      - name: Website statistics
+        run: |
+          echo "📊 Website Statistics"
+          echo "===================="
+
+          MD_COUNT=$(find source -name "*.md" | wc -l)
+          echo "Markdown files: $MD_COUNT"
+
+          HTML_COUNT=$(find public -name "*.html" | wc -l)
+          echo "Generated HTML pages: $HTML_COUNT"
+
+          IMG_COUNT=$(find source \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" -o -name "*.gif" -o -name "*.svg" \) | wc -l)
+          echo "Images: $IMG_COUNT"
+
+          PUBLIC_SIZE=$(du -sh public | cut -f1)
+          echo "Build size: $PUBLIC_SIZE"
+
+          echo "✅ Statistics completed"
