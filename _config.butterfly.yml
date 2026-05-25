@@ -200,7 +200,7 @@ toc:
   scroll_percent: true
 
 post_copyright:
-  enable: true
+  enable: false
   decode: false
   author_href:
   license: CC BY-NC-SA 4.0
@@ -474,8 +474,8 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
-  placeholder:
+  use: local_search
+  placeholder: 搜索文章
 
   # Algolia Search
   algolia_search:
@@ -484,6 +484,7 @@ search:
 
   # Local Search
   local_search:
+    path: search.xml
     # Preload the search data when the page loads.
     preload: false
     # Show top n results per article, show all results by setting to -1

@@ -23,6 +23,9 @@ importers:
       hexo-generator-index:
         specifier: ^3.0.0
         version: 3.0.0
+      hexo-generator-search:
+        specifier: ^2.4.3
+        version: 2.4.3(chokidar@3.6.0)
       hexo-generator-tag:
         specifier: ^2.0.0
         version: 2.0.0
@@ -492,6 +495,10 @@ packages:
   hexo-generator-index@3.0.0:
     resolution: {integrity: sha512-83AuNN4cWdLVi//3ugR8E3kR6rrOwhXZt+hOCm1IjtIGj353/GlrtpMHpqZHU5kqipzj4miy9dweVdukXglVWw==}
     engines: {node: '>=14'}
+
+  hexo-generator-search@2.4.3:
+    resolution: {integrity: sha512-Z5hfZq2g3np/Tgdp2q9HobfIvU6Pdz89tnTurc1IIq/vW0MHgDynk0Aiv6kvMtKWthnZ5l0iEMT3YLN35NdYwQ==}
+    engines: {node: '>= 0.10.0'}
 
   hexo-generator-tag@2.0.0:
     resolution: {integrity: sha512-1px/hF3veEohWDN8jjzchQhaiz+uOStUvvMaBJC9vWOlALh30UFcapL8IrvAwwJZjFRVA+WqGgDRqoQ8+yaaFw==}
@@ -1550,6 +1557,13 @@ snapshots:
   hexo-generator-index@3.0.0:
     dependencies:
       hexo-pagination: 3.0.0
+
+  hexo-generator-search@2.4.3(chokidar@3.6.0):
+    dependencies:
+      nunjucks: 3.2.4(chokidar@3.6.0)
+      utils-merge: 1.0.1
+    transitivePeerDependencies:
+      - chokidar
 
   hexo-generator-tag@2.0.0:
     dependencies:
