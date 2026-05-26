@@ -18,10 +18,11 @@ nav:
   fixed: true
 
 menu:
-  # Home: / || fas fa-home
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
+  主页: / || fas fa-home
+  列表||fas fa-list:
+    音乐: /music/ || fas fa-music
+    电影: /movies/ || fas fa-video
+  开往: https://www.travellings.cn/go || fas fa-train-subway
 
 # --------------------------------------
 # Code Blocks Settings
@@ -757,12 +758,12 @@ site_verification:
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 
-# theme_color:
-#   enable: true
-#   main: "#49B1F5"
+theme_color:
+  enable: true
+  main: "#84ACE3"
 #   paginator: "#00c4b6"
-#   button_hover: "#FF7242"
-#   text_selection: "#00c4b6"
+  button_hover: "#A3C3F1"
+  text_selection: "#B7D1F5"
 #   link_color: "#99a9bf"
 #   meta_color: "#858585"
 #   hr_color: "#A4D8FA"
