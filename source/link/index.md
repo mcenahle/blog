@@ -22,7 +22,7 @@ P.S. 如果是医学生、护理学生或其他与临床医疗相关领域的博
 name: Website Name
 link: https://example.com/
 avatar: https://example.com/path/to/file.png
-descr: Werbsite Description
+descr: Website Description
 ```
 
 **方法2：**在本网站的 [友情链接管理配置文件](https://github.com/mcenahle/blog/tree/main/source/_data/link.yml) 中，[提交一个 Pull Request（PR）](https://github.com/mcenahle/blog/edit/main/source/_data/link.yml)，并等待我手动 merge。*（此方法的等待时长预计为3小时-1天）*
