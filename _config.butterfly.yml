@@ -769,7 +769,7 @@ theme_color:
 #   hr_color: "#A4D8FA"
 #   code_foreground: "#F47466"
 #   code_background: "rgba(27, 31, 35, .05)"
-#   toc_color: "#00c4b6"
+  toc_color: "#A3C3F1"
 #   blockquote_padding_color: "#49b1f5"
 #   blockquote_background_color: "#49b1f5"
 #   scrollbar_color: "#49b1f5"
@@ -786,7 +786,7 @@ tag_ui:
 rounded_corners_ui: true
 
 # Stretches the lines so that each line has equal width
-text_align_justify: false
+text_align_justify: true
 
 # Add a mask to the header and footer
 mask:
@@ -911,7 +911,7 @@ clickShowText:
 # https://github.com/francoischalifour/medium-zoom
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
-lightbox:
+lightbox: fancybox
 
 # --------------------------------------
 # Tag Plugins settings
