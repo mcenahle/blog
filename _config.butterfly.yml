@@ -260,12 +260,13 @@ footer:
   nav:
   owner:
     enable: true
-    since: 2025
+    since: 2024
   # Copyright of theme and framework
   copyright:
     enable: true
     version: true
   custom_text:
+    博客开发版。
 
 # --------------------------------------
 # Aside Settings
