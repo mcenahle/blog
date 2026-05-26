@@ -824,13 +824,13 @@ beautify:
 font:
   global_font_size:
   code_font_size:
-  font_family:
-  code_font_family:
+  font_family: SourceHanSansCN-Regular
+  code_font_family: JetBrainsMono-Regular
 
 # Font settings for the site title and site subtitle
 blog_title_font:
-  font_link:
-  font_family:
+  font_link: https://www.mcenahle.org.cn/fonts/NotoSerifCJKsc-Regular.woff2
+  font_family: NotoSerifCJKsc-Regular, serif
 
 # The setting of divider icon
 hr_icon:
