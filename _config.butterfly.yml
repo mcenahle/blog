@@ -295,7 +295,7 @@ aside:
     enable: true
     content: 本网站正在开发之中。目前有以下访问方式：<a href="https://b.mn.edu.kg">Cloudflare Pages</a>、<a href="https://new-blog-1mr.pages.dev/">Cloudflare Pages 默认域名</a>、<a href="https://preeminent-horse-f94ad7.netlify.app/">Netlify</a>
   card_recent_post:
-    enable: true
+    enable: false
     # If set 0 will show all
     limit: 5
     # Sort: date / updated
