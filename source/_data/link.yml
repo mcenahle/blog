@@ -1,0 +1,43 @@
+- class_name: 推荐链接
+  class_desc: 医学生/护理生的博客网站！
+  link_list:
+    - name: Davidの3号基地
+      link: https://www.david03.top/
+      avatar: https://www.david03.top/favicon.ico
+      descr: 一入医门深似海，从此笃行无归途
+
+- class_name: 友情链接
+  class_desc: 那些人，那些事
+  link_list:
+    - name: 晚夜的个人博客（暂离）
+      link: https://www.iczrx.cn
+      avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=1463656527&spec=640
+      descr: 做好量变的准备，促进事物的质变。
+    - name: 刘郎阁
+      link: https://vjo.cc
+      avatar: https://vjo.cc/usr/uploads/logo.jpeg
+      descr: 一个积极向上的生活探索者！
+    - name: obaby
+      link: https://oba.by
+      avatar: https://gg.lang.bi/avatar/d6ebc088df916bcc9e8b94a09f9b0f604e57be54b04bd520c6db2492740fc563?s=128&d=identicon&r=r
+      descr: 程序媛 / 独立开发者 / 智商不稳定的女神经
+    - name: 兔兔博客🇨🇳
+      link: https://blog.xn--eet944d.top/
+      avatar: https://blog.xn--eet944d.top/assets/avatar.webp
+      descr: 万事都要全力以赴，包括开心
+
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: Github
+      link: https://github.com/
+      avatar: /img/mdi--github.png
+      descr: 全球开发者网站
+    - name: Youtube
+      link: https://www.youtube.com/
+      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
+      descr: 视频网站
+    - name: .page registry
+      link: https://get.page/
+      avatar: https://www.gstatic.com/images/branding/googleg_gradient/2x/googleg_gradient_standard_192dp.png
+      descr: .page 注册局网站
