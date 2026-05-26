@@ -829,8 +829,8 @@ font:
 
 # Font settings for the site title and site subtitle
 blog_title_font:
-  font_link: /fonts/NotoSerifCJKsc-Regular.woff2
-  font_family: NotoSerifCJKsc-Regular, serif !important
+  font_link:
+  font_family: SourceHanSansCN-Regular
 
 # The setting of divider icon
 hr_icon:
