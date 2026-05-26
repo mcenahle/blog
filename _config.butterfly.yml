@@ -829,7 +829,7 @@ font:
 
 # Font settings for the site title and site subtitle
 blog_title_font:
-  font_link: https://www.mcenahle.org.cn/fonts/NotoSerifCJKsc-Regular.woff2
+  font_link: /fonts/NotoSerifCJKsc-Regular.woff2
   font_family: NotoSerifCJKsc-Regular, serif
 
 # The setting of divider icon
