@@ -289,11 +289,11 @@ aside:
     button:
       enable: true
       icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/mcenahle/
+      text: 在 Github 上查看源代码
+      link: https://github.com/mcenahle/blog/
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 本网站正在开发之中。目前有以下访问方式：<a href="https://b.mn.edu.kg">Cloudflare Pages</a>、<a href="https://new-blog-1mr.pages.dev/">Cloudflare Pages 默认域名</a>、<a href="https://preeminent-horse-f94ad7.netlify.app/">Netlify</a>
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -764,7 +764,7 @@ theme_color:
 #   paginator: "#00c4b6"
   button_hover: "#A3C3F1"
   text_selection: "#B7D1F5"
-#   link_color: "#99a9bf"
+  link_color: "#7AAFFF"
 #   meta_color: "#858585"
 #   hr_color: "#A4D8FA"
 #   code_foreground: "#F47466"
