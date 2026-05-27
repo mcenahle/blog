@@ -95,7 +95,7 @@ footer_img: false
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
 # If an array is provided, a random background will be selected from the array on each load
-background:
+background: /img/background.jpg
 
 cover:
   # Disable the cover or not
@@ -863,9 +863,9 @@ canvas_ribbon:
   click_to_change: false
   mobile: false
 
-# Fluttering Ribbon
+# Fluttering Ribbon 丝带
 canvas_fluttering_ribbon:
-  enable: true
+  enable: false
   mobile: true
 
 # canvas_nest
