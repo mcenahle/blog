@@ -54,7 +54,7 @@ $blockquote-padding-color = $themeColorEnable && hexo-config('theme_color.blockq
 $blockquote-background-color = $themeColorEnable && hexo-config('theme_color.blockquote_background_color') ? alpha(convert(hexo-config('theme_color.blockquote_background_color')), .1) : alpha($blockquote-padding-color, .1)
 // page
 $body-bg = #fff
-$a-link-color = #99a9bf
+$a-link-color = #92bdfa
 $sticky-color = $light-orange
 $theme-meta-color = $themeColorEnable && hexo-config('theme_color.meta_color') ? convert(hexo-config('theme_color.meta_color')) : #858585
 // sidebar
@@ -272,4 +272,8 @@ code {
   opacity: 0.2 !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important; /* Safari 兼容 */
+}
+
+#footer {
+  background-color: rgba(100, 165, 250, 0.6) !important;
 }
