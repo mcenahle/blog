@@ -114,7 +114,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: "Page Not Found"
+  subtitle: "未找到该页面"
   background: /img/error-page.png
 
 post_meta:
