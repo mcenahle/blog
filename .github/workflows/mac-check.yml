@@ -1,0 +1,17 @@
+name: Mac Check
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 */6 * * *"
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Show system info
+        run: |
+          sw_vers
+          uname -a
