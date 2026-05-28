@@ -3,6 +3,8 @@ name: Check
 on:
   push:
   pull_request:
+  schedule:
+    - cron: "0 2,6,14,18 * * *"
 
 jobs:
   build:
