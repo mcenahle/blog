@@ -3,6 +3,9 @@ title: 一个学生眼中的课堂应该是什么样？
 abbrlink: 2026/05/14/0
 date: 2026-05-14 19:48:26
 categories: 教育学类议论文
+tags:
+  - 作业
+  - 教育
 ---
 
 <!-- {% note info simple %}
