@@ -56,6 +56,9 @@ importers:
       hexo-server:
         specifier: ^3.0.0
         version: 3.0.0
+      hexo-tag-map:
+        specifier: ^1.2.1
+        version: 1.2.1
       hexo-tag-steamgame:
         specifier: ^1.0.0
         version: 1.0.0
@@ -681,6 +684,9 @@ packages:
   hexo-server@3.0.0:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
     engines: {node: '>=12.13.0'}
+
+  hexo-tag-map@1.2.1:
+    resolution: {integrity: sha512-0fgzP0QwI694XD4/CpnAttjTnR1uL7D8YaiZmYscKRi3WlWilcE13+6191eBFccJ80+hPyjVwuHk2sVBXq6X3Q==}
 
   hexo-tag-steamgame@1.0.0:
     resolution: {integrity: sha512-xbfxgnnt200aKUOVTJcHjEyueIQ3PPrvUj/BrgzS3IV6Ab+n+Bpj//iH+iZ86M0oqncR0pB/fWo8JqEi06jhdg==}
@@ -1918,6 +1924,8 @@ snapshots:
       serve-static: 1.16.3
     transitivePeerDependencies:
       - supports-color
+
+  hexo-tag-map@1.2.1: {}
 
   hexo-tag-steamgame@1.0.0: {}
 
