@@ -15,6 +15,9 @@ $radius: 12px;
 // 动画
 $transition: 0.3s;
 
+// 点状下划线
+$point-underline: underline dotted;
+
 @font-face {
   font-family: "SourceHanSansCN-Regular";
   src: url("https://mcenahle.com/fonts/SourceHanSansCN-Regular.woff2")
@@ -59,13 +62,13 @@ code {
   color: hsl(201, 100%, 41%);
   &:hover,
   &:focus {
-    text-decoration: underline dotted;
+    text-decoration: $point-underline;
   }
 }
 
 #footer a:hover {
   color: hsl(0, 0%, 100%);
-  text-decoration: underline dotted;
+  text-decoration: $point-underline;
 }
 
 .tk-footer {
@@ -74,13 +77,18 @@ code {
 
     &:hover,
     &:focus {
-      text-decoration: underline dotted;
+      text-decoration: $point-underline !important;
     }
   }
 }
 
+.article-title:hover {
+  text-decoration: $point-underline;
+}
+
 #page-header.not-top-img {
   #nav {
+    -webkit-backdrop-filter: blur(4px) !important;
     backdrop-filter: blur(4px) !important;
     background: rgba(255, 255, 255, 0.4) !important;
   }
