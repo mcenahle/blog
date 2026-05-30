@@ -1,7 +1,7 @@
 // 颜色
-$primary: #008ad3;
-$success: #00b96b;
-$danger: #ff4d4f;
+$primary: hsl(201, 100%, 41%);
+$success: hsl(155, 100%, 36%);
+$danger: hsl(359, 100%, 65%);
 
 // 字体
 $font-sans: "SourceHanSansCN-Regular";
@@ -56,7 +56,7 @@ code {
 }
 
 #edit {
-  color: #008ad3;
+  color: hsl(201, 100%, 41%);
   &:hover,
   &:focus {
     text-decoration: underline dotted;
@@ -64,7 +64,7 @@ code {
 }
 
 #footer a:hover {
-  color: white;
+  color: hsl(0, 0%, 100%);
   text-decoration: underline dotted;
 }
 
