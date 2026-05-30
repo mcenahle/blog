@@ -121,3 +121,11 @@ feed:
   order_by: -date
   icon: /img/icon.png
   autodiscovery: true
+
+sitemap:
+  path:
+    - sitemap.xml
+    - sitemap.txt
+  rel: false
+  tags: true
+  categories: true
