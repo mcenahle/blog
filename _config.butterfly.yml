@@ -95,7 +95,7 @@ footer_img: false
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
 # If an array is provided, a random background will be selected from the array on each load
-background: /img/background.jpg
+background: /img/MVIMG_20260530_140041.jpg
 
 cover:
   # Disable the cover or not
