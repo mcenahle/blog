@@ -14,6 +14,9 @@ importers:
       hexo-abbrlink:
         specifier: ^2.2.1
         version: 2.2.1
+      hexo-filter-nofollow:
+        specifier: ^2.0.2
+        version: 2.0.2
       hexo-generator-archive:
         specifier: ^2.0.0
         version: 2.0.0
@@ -467,6 +470,10 @@ packages:
     resolution: {integrity: sha512-druJeBgLpG9ncDS5AhBHdAXk0G4CFj8Qes09pApyZ6bR+nJW1JYiDMuilhudaKDdq+1l49jWXVTidkcb7p0Jbw==}
     engines: {node: '>=14'}
     hasBin: true
+
+  hexo-filter-nofollow@2.0.2:
+    resolution: {integrity: sha512-roIkEIkGOR22EPMoy8iKrufDoAH25LOT5ZeVXVLavEpM757Y96kfUhyathryMLXr326EURffgkZAKsVf3EDl0A==}
+    engines: {node: '>= 8.6.0'}
 
   hexo-front-matter@1.0.0:
     resolution: {integrity: sha512-Hn8IIzgWWnxYTekrjnA0rxwWMoQHifyrxKMqVibmFaRKf4AQ2V6Xo13Jiso6CDwYfS+OdA41QS5DG1Y+QXA5gw==}
@@ -1523,6 +1530,8 @@ snapshots:
       picocolors: 1.1.1
       resolve: 1.22.12
       tildify: 2.0.0
+
+  hexo-filter-nofollow@2.0.2: {}
 
   hexo-front-matter@1.0.0:
     dependencies:
