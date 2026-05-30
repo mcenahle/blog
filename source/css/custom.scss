@@ -6,6 +6,8 @@ $danger: #ff4d4f;
 // 字体
 $font-sans: "SourceHanSansCN-Regular";
 $font-mono: "JetBrainsMono-Regular";
+$font-weight: 400;
+$font-style: normal;
 
 // 圆角
 $radius: 12px;
@@ -17,16 +19,16 @@ $transition: 0.3s;
   font-family: "SourceHanSansCN-Regular";
   src: url("https://mcenahle.com/fonts/SourceHanSansCN-Regular.woff2")
     format("woff2");
-  font-weight: 400;
-  font-style: normal;
+  font-weight: $font-weight;
+  font-style: $font-style;
 }
 
 @font-face {
   font-family: "JetBrainsMono-Regular";
   src: url("https://mcenahle.com/fonts/JetBrainsMono-Regular.woff2")
     format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: $font-weight;
+  font-style: $font-style;
 }
 
 code {
@@ -40,15 +42,15 @@ code {
 .post-edit-link-wrap {
   margin-top: 0.8rem;
   font-size: 0.9rem;
-}
 
-.post-edit-link-wrap .post-edit-link {
-  color: var(--text-highlight-color);
-  text-decoration: none;
-}
+  .post-edit-link {
+    color: var(--text-highlight-color);
+    text-decoration: none;
 
-.post-edit-link-wrap .post-edit-link:hover {
-  color: var(--theme-color);
+    &:hover {
+      color: var(--theme-color);
+    }
+  }
 }
 
 .bg-animation {
@@ -59,11 +61,10 @@ code {
 
 #edit {
   color: #008ad3;
-}
-
-#edit:hover,
-#edit:focus {
-  text-decoration: underline dotted;
+  &:hover,
+  &:focus {
+    text-decoration: underline dotted;
+  }
 }
 
 #footer a:hover {
