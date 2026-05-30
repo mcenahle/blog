@@ -68,6 +68,17 @@ code {
   text-decoration: underline dotted;
 }
 
+.tk-footer {
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline dotted;
+    }
+  }
+}
+
 #page-header.not-top-img {
   #nav {
     backdrop-filter: blur(4px) !important;
