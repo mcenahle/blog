@@ -67,3 +67,10 @@ code {
   color: white;
   text-decoration: underline dotted;
 }
+
+#page-header.not-top-img {
+  #nav {
+    backdrop-filter: blur(4px) !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+  }
+}
