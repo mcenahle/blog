@@ -1,0 +1,72 @@
+// 颜色
+$primary: #008ad3;
+$success: #00b96b;
+$danger: #ff4d4f;
+
+// 字体
+$font-sans: "SourceHanSansCN-Regular";
+$font-mono: "JetBrainsMono-Regular";
+
+// 圆角
+$radius: 12px;
+
+// 动画
+$transition: 0.3s;
+
+@font-face {
+  font-family: "SourceHanSansCN-Regular";
+  src: url("https://mcenahle.com/fonts/SourceHanSansCN-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JetBrainsMono-Regular";
+  src: url("https://mcenahle.com/fonts/JetBrainsMono-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+code {
+  font-family: $font-mono;
+}
+
+#footer a:hover {
+  color: #2f72d0;
+}
+
+.post-edit-link-wrap {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.post-edit-link-wrap .post-edit-link {
+  color: var(--text-highlight-color);
+  text-decoration: none;
+}
+
+.post-edit-link-wrap .post-edit-link:hover {
+  color: var(--theme-color);
+}
+
+.bg-animation {
+  opacity: 0.2 !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari 兼容 */
+}
+
+#edit {
+  color: #008ad3;
+}
+
+#edit:hover,
+#edit:focus {
+  text-decoration: underline dotted;
+}
+
+#footer a:hover {
+  color: white;
+  text-decoration: underline dotted;
+}
