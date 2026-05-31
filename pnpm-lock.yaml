@@ -56,6 +56,9 @@ importers:
       hexo-server:
         specifier: ^3.0.0
         version: 3.0.0
+      hexo-server-live:
+        specifier: ^0.2.12
+        version: 0.2.12
       hexo-tag-map:
         specifier: ^1.2.1
         version: 1.2.1
@@ -680,6 +683,9 @@ packages:
   hexo-renderer-stylus@3.0.1:
     resolution: {integrity: sha512-cFm8ZwShBBeFcQwOXc8EK7lIZnSYVD6OJykdL4GBw99hxc4eD5Hlsi32nRzE8sgKv00jhX1s9Da3GVVFMPAVQg==}
     engines: {node: '>=14'}
+
+  hexo-server-live@0.2.12:
+    resolution: {integrity: sha512-F3tQFzdzztKouXKsxUG2TtgWlmKW8dS/QzXDCOB9Sme+++5iy0gQ0BdJBF9SEkIyiK074oDPoOMgxavKoxM1Uw==}
 
   hexo-server@3.0.0:
     resolution: {integrity: sha512-u4s0ty9Aew6jV+a9oMrXBwhrRpUQ0U8PWM/88a5aHgDru58VY81mVrxOFxs788NAsWQ8OvsJtF5m7mnXoRnSIA==}
@@ -1911,6 +1917,8 @@ snapshots:
       stylus: 0.62.0
     transitivePeerDependencies:
       - supports-color
+
+  hexo-server-live@0.2.12: {}
 
   hexo-server@3.0.0:
     dependencies:
