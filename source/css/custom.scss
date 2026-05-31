@@ -54,8 +54,8 @@ code {
 
 .bg-animation {
   opacity: 0.2 !important;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* Safari 兼容 */
 }
 
 #edit {
@@ -82,8 +82,10 @@ code {
   }
 }
 
-.article-title:hover {
-  text-decoration: $point-underline;
+.article-title:hover,
+.article-meta__categories:hover,
+.article-meta__tags:hover {
+  text-decoration: $point-underline !important;
 }
 
 #page-header.not-top-img {
