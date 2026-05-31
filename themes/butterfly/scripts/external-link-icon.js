@@ -30,7 +30,7 @@ hexo.extend.filter.register('after_post_render', function (data) {
           return match;
         }
 
-        return `<a ${attrs}>${text}${externalIcon}</a>`;
+        return `<a ${attrs}>${text} ${externalIcon}</a>`;
       } catch (e) {
         return match;
       }
