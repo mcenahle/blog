@@ -88,6 +88,12 @@ code {
   text-decoration: $point-underline !important;
 }
 
+.post-meta-categories {
+  a:hover {
+    text-decoration: $point-underline !important;
+  }
+}
+
 #page-header.not-top-img {
   #nav {
     -webkit-backdrop-filter: blur(4px) !important;
