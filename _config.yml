@@ -129,3 +129,8 @@ sitemap:
   rel: false
   tags: true
   categories: true
+
+live_reload:
+  delay: 0
+  info: true
+  retry: 3000
