@@ -84,12 +84,9 @@ code {
 
 .article-title:hover,
 .article-meta__categories:hover,
-.article-meta__tags:hover {
-  text-decoration: $point-underline !important;
-}
-
-.post-meta-categories {
-  a:hover {
+.article-meta__tags:hover,
+.post-meta-categories a {
+  &:hover {
     text-decoration: $point-underline !important;
   }
 }
