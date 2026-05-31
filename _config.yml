@@ -137,6 +137,9 @@ live_reload:
 
 robots:
   user_agent: "*"
+  allow:
+    - /schedule/
   disallow:
     - /
   sitemaps:
+    - sitemap.xml
