@@ -53,6 +53,9 @@ importers:
       hexo-renderer-stylus:
         specifier: ^3.0.1
         version: 3.0.1
+      hexo-robots:
+        specifier: ^1.0.2
+        version: 1.0.2(hexo@7.3.0(chokidar@3.6.0))
       hexo-server:
         specifier: ^3.0.0
         version: 3.0.0
@@ -683,6 +686,12 @@ packages:
   hexo-renderer-stylus@3.0.1:
     resolution: {integrity: sha512-cFm8ZwShBBeFcQwOXc8EK7lIZnSYVD6OJykdL4GBw99hxc4eD5Hlsi32nRzE8sgKv00jhX1s9Da3GVVFMPAVQg==}
     engines: {node: '>=14'}
+
+  hexo-robots@1.0.2:
+    resolution: {integrity: sha512-EdwcGVjWlIWAhDhGJsqW4/fPxU/Usg99v+44dj9WasnHLwc7UH+iyPF29gS8cq81vPiJ5E82cc2wR3Z15AU5wQ==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      hexo: ^7.0.0 || ^8.0.0
 
   hexo-server-live@0.2.12:
     resolution: {integrity: sha512-F3tQFzdzztKouXKsxUG2TtgWlmKW8dS/QzXDCOB9Sme+++5iy0gQ0BdJBF9SEkIyiK074oDPoOMgxavKoxM1Uw==}
@@ -1917,6 +1926,10 @@ snapshots:
       stylus: 0.62.0
     transitivePeerDependencies:
       - supports-color
+
+  hexo-robots@1.0.2(hexo@7.3.0(chokidar@3.6.0)):
+    dependencies:
+      hexo: 7.3.0(chokidar@3.6.0)
 
   hexo-server-live@0.2.12: {}
 
