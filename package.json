@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "quick": "hexo clean && hexo g && hexo s"
+    "quick": "hexo clean && hexo g && hexo server -p 80"
   },
   "hexo": {
     "version": "7.3.0"
