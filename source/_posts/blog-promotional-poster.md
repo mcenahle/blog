@@ -1,0 +1,16 @@
+---
+title: 博客宣传图
+abbrlink: 2026/06/04/blog-promotional-poster
+date: 2026-06-04 14:29:23
+categories: 站点建设
+tags:
+  - Illustrator
+---
+
+blog.mcenahle.page 的博客宣传图使用 Illustrator 进行设计和制作。
+
+预览版图片如下：
+
+![博客宣传图（预览版）](/img/blog-promotional-poster-demo.jpg)
+
+高清无水印图片将于转移到 `https://blog.mcenahle.page` 后（2026年6月26日-7月1日）展示并启用。
