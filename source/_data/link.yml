@@ -33,6 +33,10 @@
       link: https://github.com/
       avatar: /img/mdi--github.png
       descr: 全球开发者网站
+    - name: mdn
+      link: https://developer.mozilla.org/zh-CN/
+      avatar: /img/cib--mozilla.png
+      descr: 开发者的资源，由开发者打造
     - name: Youtube
       link: https://www.youtube.com/
       avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
