@@ -1,0 +1,27 @@
+name: Mirror to CNB Cool
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to CNB Cool
+        env:
+          CNB_USERNAME: ${{ secrets.CNB_USERNAME }}
+          CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
+        run: |
+          git remote add cnb https://${CNB_USERNAME}:${CNB_TOKEN}@cnb.cool/mcenahle/blog.git
+
+          git push cnb --all --force
+
+          git push cnb --tags --force
