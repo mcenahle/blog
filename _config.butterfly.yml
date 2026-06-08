@@ -48,7 +48,7 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-  fab fa-github: https://mn.edu.kg/gh/mcenahle/ || Github || '#24292e'
+  fab fa-github: https://mn.edu.kg/gh/ || Github || '#24292e'
   fas fa-envelope: mailto:hi@mcenahle.page || Email || '#4a7dbe'
 
 # --------------------------------------
