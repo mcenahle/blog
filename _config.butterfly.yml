@@ -266,7 +266,7 @@ footer:
   copyright:
     enable: true
     version: true
-  custom_text: 博客开发版。
+  custom_text: 博客开发版。即将启用新域：https://blog.mcenahle.is-a.dev
 
 # --------------------------------------
 # Aside Settings
