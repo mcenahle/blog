@@ -22,7 +22,6 @@ menu:
   列表||fas fa-list:
     追剧: /cinema/ || fas fa-film
     游戏: /games/ || fas fa-gamepad
-  GitHub 贡献活动日历: /github-contributions/ || fas fa-code-commit
   友情链接及申请: /link/ || fas fa-link
   开往: https://www.travellings.cn/go || fas fa-train-subway
 
