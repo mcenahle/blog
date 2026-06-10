@@ -143,3 +143,19 @@ robots:
     - /
   sitemaps:
     - sitemap.xml
+
+cinema: # 追剧设置
+  enable: true # 是否启用
+  vmid: 1622082590 # 用户ID
+  title: "追剧列表" # 页面标题
+  quote: "生命不息，追剧不止！" # 页面引言
+  path: cinema/index.html
+  progress: true # 是否显示进度条
+  theme: auto # 页面主题: light=亮色, dark=暗色, auto=跟随系统
+  show: 1 # 初始显示页面: 0=想看, 1=在看, 2=看过
+  lazyload: true # 是否启用图片懒加载
+  metaColor: # meta 信息字体颜色
+  color: # 简介字体颜色
+  webp: true # 是否使用 webp 格式图片
+  swup: false # 是否启用swup兼容，需要主题支持
+  source: bili

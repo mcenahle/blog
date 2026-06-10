@@ -20,7 +20,7 @@ nav:
 menu:
   主页: / || fas fa-home
   列表||fas fa-list:
-    音乐: /music/ || fas fa-music
+    追剧: /cinema/ || fas fa-film
     游戏: /games/ || fas fa-gamepad
   友情链接及申请: /link/ || fas fa-link
   开往: https://www.travellings.cn/go || fas fa-train-subway
