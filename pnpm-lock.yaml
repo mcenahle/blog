@@ -17,6 +17,9 @@ importers:
       hexo-bilibili-bangumi:
         specifier: ^2.1.6
         version: 2.1.6
+      hexo-calendar:
+        specifier: ^1.1.1
+        version: 1.1.1
       hexo-filter-nofollow:
         specifier: ^2.0.2
         version: 2.0.2
@@ -648,6 +651,9 @@ packages:
 
   hexo-bilibili-bangumi@2.1.6:
     resolution: {integrity: sha512-3ksPfeWzQZbH08uhh8EdUr1FLv/zRqpZeC+757E5iQz2fX8oqYJf2IQLewDryQCGkHvLgTA2UG42EsPumMcI4Q==}
+
+  hexo-calendar@1.1.1:
+    resolution: {integrity: sha512-I/oCaBMD1+O7n9Tog0YxC8wNnWtECb/dylxVGQFJetyBXqodXZ50zO7K9wCqPcefFJavStsHGfVmwQ+IA1aIZQ==}
 
   hexo-cli@4.3.2:
     resolution: {integrity: sha512-druJeBgLpG9ncDS5AhBHdAXk0G4CFj8Qes09pApyZ6bR+nJW1JYiDMuilhudaKDdq+1l49jWXVTidkcb7p0Jbw==}
@@ -1978,6 +1984,8 @@ snapshots:
     transitivePeerDependencies:
       - debug
       - supports-color
+
+  hexo-calendar@1.1.1: {}
 
   hexo-cli@4.3.2:
     dependencies:
