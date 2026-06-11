@@ -90,7 +90,7 @@ category_img:
 category_per_img:
 
 # The background image of footer
-footer_img: false
+footer_img: /img/MVIMG_20260527_101933.jpg
 
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
