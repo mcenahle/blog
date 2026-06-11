@@ -633,13 +633,13 @@ twikoo:
 # Giscus
 # https://giscus.app/
 giscus:
-  repo:
-  repo_id:
-  category_id:
+  repo: mcenahle/blog
+  repo_id: R_kgDOSnUkUA
+  category_id: DIC_kwDOSnUkUM4C-8q5
   light_theme: light
   dark_theme: dark
   js:
-  option:
+  option: pathname
 
 # Remark42
 # https://remark42.com/docs/configuration/frontend/
