@@ -39,8 +39,9 @@ body {
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
-code {
-  font-family: $font-mono;
+code,
+.code-toolbar {
+  font-family: $font-mono !important;
 }
 
 .post-edit-link-wrap {
