@@ -108,3 +108,21 @@ code,
 .container code {
   color: #4c4948;
 }
+
+.twikoo div.code-toolbar > .toolbar > .toolbar-item > button {
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 52%, #e0e7ff 100%);
+  color: #334155;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 2px 8px rgba(59, 130, 246, 0.08);
+  transition: all 0.25s ease;
+  &:hover,
+  &:focus {
+    border: 1px solid #c1c8d8;
+    transform: translateY(-2px);
+    background: linear-gradient(315deg, #fff1f2 0%, #fce7f3 52%, #f5d0fe 100%);
+  }
+}
