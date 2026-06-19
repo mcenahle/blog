@@ -126,3 +126,21 @@ code,
     background: linear-gradient(315deg, #fff1f2 0%, #fce7f3 52%, #f5d0fe 100%);
   }
 }
+.rss-btn {
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  background-image: linear-gradient(
+    135deg,
+    #ffea94 0%,
+    #d39031 59%,
+    #894410 100%
+  );
+  color: #333;
+  &:hover {
+    color: #333;
+  }
+}
