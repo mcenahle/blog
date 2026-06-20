@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>订阅梅之夏博客 RSS</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,viewport-fit=cover"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#example-navbar-collapse"
+          >
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">梅之夏</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a target="_blank" rel="noopener" href="javascript:void(0)"
+                >订阅梅之夏博客 RSS</a
+              >
+            </li>
+            <li><a target="_blank" rel="noopener" href="/">返回主站</a></li>
+            <li class="dropdown">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+              >
+                友情链接
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.david03.top/"
+                    >【推荐链接】Davidの3号基地
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                      /></svg
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.iczrx.cn/"
+                    >晚夜的个人博客（暂离）
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                      /></svg
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://vjo.cc/"
+                    >刘郎阁
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                      /></svg
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://oba.by/"
+                    >obaby
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                      /></svg
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://blog.真寻.top/"
+                    >兔兔博客🇨🇳
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                      /></svg
+                  ></a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://github.com/"
+                    >GitHub
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                      /></svg
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://developer.mozilla.org/zh-CN/"
+                    >mdn
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                      /></svg
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.youtube.com/"
+                    >Youtube
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                      /></svg
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://get.page/"
+                    >.page registry
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                      /></svg
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div style="margin-left: 12px; margin-right: 12px">
+      <p>您当前的位置：</p>
+      <ul class="breadcrumb">
+        <li>
+          <a href="/"
+            >梅之夏
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5m-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4zm-3-4h8v2H8z"
+              /></svg
+          ></a>
+        </li>
+        <li class="active">订阅梅之夏博客 RSS</li>
+      </ul>
+
+      <div class="page-header">
+        <h3>
+          什么是 RSS？
+          <small><i>信息来源：维基百科</i></small>
+        </h3>
+      </div>
+      <p style="text-indent: 2em">
+        RSS（英文全称：RDF Site Summary 或 Really Simple
+        Syndication），中文译作简易信息聚合，也称聚合内容，是一种消息来源格式规范，用以聚合多个网站更新的内容并自动通知网站订阅者。使用RSS后，网站订阅者无需手动查看网站是否有新的内容，同时RSS能将多个网站的更新集成并以摘要形式呈现，有助于订阅者快速获取重要信息，并选择性点击查看。
+      </p>
+
+      <div class="page-header">
+        <h3>本网站有 RSS 吗？</h3>
+      </div>
+      <p style="text-indent: 2em">
+        当然有啦！借助
+        <a
+          href="https://github.com/hexojs/hexo-generator-feed"
+          target="_blank"
+          rel="noopener"
+          >hexo-generator-feed
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+            />
+          </svg>
+        </a>
+        插件，我给这个网站也加上了 RSS。
+      </p>
+
+      <div class="btn-group btn-group-justified">
+        <a
+          href="/feed.xml"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+          >查看 RSS
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5m-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4zm-3-4h8v2H8z"
+            ></path></svg
+        ></a>
+      </div>
+
+      <p style="text-indent: 2em; margin-top: 12px">
+        通过
+        RSS，你可以随时随地的获取本网站的最新博客文章，不受制于当前的网络大数据算法。<b
+          >想看什么，你说了算！</b
+        >
+      </p>
+
+      <div class="page-header">
+        <h3>我是 RSS 小白。怎么使用 RSS？</h3>
+      </div>
+      <p style="text-indent: 2em">
+        RSS 本身只是数据格式，你需要借助 RSS 阅读器进行订阅和阅读。常见的 RSS
+        阅读器包括：
+      </p>
+      <ul>
+        <li>
+          <a target="_blank" rel="noopener" href="https://feedly.com/"
+            >Feedly
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+              /></svg></a
+          >（网页版、Android、iOS）
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://hyliu.me/fluent-reader/"
+            >Fluent Reader
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+              /></svg></a
+          >（Windows）
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/ReadYouApp/ReadYou/"
+            >Read You
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+              /></svg></a
+          >（Android）
+        </li>
+        <li>
+          <a target="_blank" rel="noopener" href="https://netnewswire.com/"
+            >NetNewsWire
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+              /></svg></a
+          >（macOS、iOS）
+        </li>
+      </ul>
+      <p style="text-indent: 2em">使用方法：</p>
+      <ol>
+        <li>
+          复制本网站 RSS 地址；<code id="rss-url"
+            >https://blog.mcenahle.page/feed.xml</code
+          >
+
+          <button
+            id="copy-btn"
+            type="button"
+            class="btn btn-xs btn-default"
+            onclick="copyRSS()"
+          >
+            复制
+          </button>
+        </li>
+        <li>打开 RSS 阅读器；</li>
+        <li>点击“添加订阅”；</li>
+        <li>粘贴 RSS 地址；</li>
+        <li>完成订阅。</li>
+      </ol>
+    </div>
+
+    <script>
+      function copyRSS() {
+        navigator.clipboard.writeText(
+          document.getElementById("rss-url").innerText,
+        );
+
+        document.getElementById("copy-btn").innerText = "已复制";
+
+        setTimeout(function () {
+          document.getElementById("copy-btn").innerText = "复制";
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
