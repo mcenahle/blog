@@ -5,8 +5,9 @@
     <title>订阅梅之夏博客 RSS</title>
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0,viewport-fit=cover"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
@@ -35,7 +36,7 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button
@@ -58,7 +59,11 @@
                 >订阅梅之夏博客 RSS</a
               >
             </li>
-            <li><a target="_blank" rel="noopener" href="/">返回主站</a></li>
+            <li>
+              <a target="_blank" rel="noopener" href="/"
+                >返回主站 <iconify-icon icon="ic:outline-link"></iconify-icon
+              ></a>
+            </li>
             <li class="dropdown">
               <a
                 target="_blank"
@@ -77,61 +82,24 @@
                     rel="noopener"
                     href="https://www.david03.top/"
                     >【推荐链接】Davidの3号基地
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-                      /></svg
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
                   ></a>
                 </li>
                 <li>
                   <a target="_blank" rel="noopener" href="https://www.iczrx.cn/"
                     >晚夜的个人博客（暂离）
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-                      /></svg
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
                   ></a>
                 </li>
                 <li>
                   <a target="_blank" rel="noopener" href="https://vjo.cc/"
                     >刘郎阁
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-                      /></svg
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
                   ></a>
                 </li>
                 <li>
                   <a target="_blank" rel="noopener" href="https://oba.by/"
-                    >obaby
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-                      /></svg
+                    >obaby <iconify-icon icon="mdi:external-link"></iconify-icon
                   ></a>
                 </li>
                 <li>
@@ -140,32 +108,14 @@
                     rel="noopener"
                     href="https://blog.真寻.top/"
                     >兔兔博客🇨🇳
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-                      /></svg
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
                   ></a>
                 </li>
                 <li class="divider"></li>
                 <li>
                   <a target="_blank" rel="noopener" href="https://github.com/"
-                    >GitHub
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-                      /></svg
+                    ><iconify-icon icon="mdi:github"></iconify-icon> GitHub
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
                   ></a>
                 </li>
                 <li>
@@ -173,17 +123,7 @@
                     target="_blank"
                     rel="noopener"
                     href="https://developer.mozilla.org/zh-CN/"
-                    >mdn
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-                      /></svg
+                    >mdn <iconify-icon icon="mdi:external-link"></iconify-icon
                   ></a>
                 </li>
                 <li>
@@ -192,31 +132,13 @@
                     rel="noopener"
                     href="https://www.youtube.com/"
                     >Youtube
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-                      /></svg
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
                   ></a>
                 </li>
                 <li>
                   <a target="_blank" rel="noopener" href="https://get.page/"
                     >.page registry
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-                      /></svg
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
                   ></a>
                 </li>
               </ul>
@@ -226,25 +148,17 @@
       </div>
     </nav>
 
-    <div style="margin-left: 12px; margin-right: 12px">
+    <div style="margin-left: 12px; margin-right: 12px; margin-top: 70px">
       <p><span class="glyphicon glyphicon-map-marker"></span> 您当前的位置：</p>
       <ul class="breadcrumb">
         <li>
           <a href="/"
-            >梅之夏
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5m-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4zm-3-4h8v2H8z"
-              /></svg
+            >梅之夏 <iconify-icon icon="ic:outline-link"></iconify-icon
           ></a>
         </li>
-        <li class="active">订阅梅之夏博客 RSS</li>
+        <li class="active">
+          <iconify-icon icon="iconoir:page"></iconify-icon> 订阅梅之夏博客 RSS
+        </li>
       </ul>
 
       <div class="page-header">
@@ -254,18 +168,8 @@
         </h3>
       </div>
       <p style="text-indent: 2em">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1em"
-          height="1em"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="currentColor"
-            d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z"
-          ></path>
-        </svg>
-        RSS（英文全称：RDF Site Summary 或 Really Simple
+        <iconify-icon icon="mdi:rss"></iconify-icon> RSS（英文全称：RDF Site
+        Summary 或 Really Simple
         Syndication），中文译作简易信息聚合，也称聚合内容，是一种消息来源格式规范，用以聚合多个网站更新的内容并自动通知网站订阅者。使用
         RSS 后，网站订阅者无需手动查看网站是否有新的内容，同时 RSS
         能将多个网站的更新集成并以摘要形式呈现，有助于订阅者快速获取重要信息，并选择性点击查看。
@@ -281,18 +185,8 @@
           target="_blank"
           rel="noopener"
           >hexo-generator-feed
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-            />
-          </svg>
-        </a>
+          <iconify-icon icon="mdi:external-link"></iconify-icon
+        ></a>
         插件，我给这个网站也加上了 RSS。
       </p>
 
@@ -302,17 +196,7 @@
           target="_blank"
           rel="noopener"
           class="btn btn-primary"
-          >查看 RSS
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentColor"
-              d="M17 7h-4v2h4c1.65 0 3 1.35 3 3s-1.35 3-3 3h-4v2h4c2.76 0 5-2.24 5-5s-2.24-5-5-5m-6 8H7c-1.65 0-3-1.35-3-3s1.35-3 3-3h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4zm-3-4h8v2H8z"
-            ></path></svg
+          >查看 RSS <iconify-icon icon="ic:outline-link"></iconify-icon
         ></a>
       </div>
 
@@ -333,17 +217,7 @@
       <ul>
         <li>
           <a target="_blank" rel="noopener" href="https://feedly.com/"
-            >Feedly
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-              /></svg></a
+            >Feedly <iconify-icon icon="mdi:external-link"></iconify-icon></a
           >（网页版、Android、iOS）
         </li>
         <li>
@@ -352,16 +226,7 @@
             rel="noopener"
             href="https://hyliu.me/fluent-reader/"
             >Fluent Reader
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-              /></svg></a
+            <iconify-icon icon="mdi:external-link"></iconify-icon></a
           >（Windows）
         </li>
         <li>
@@ -369,32 +234,13 @@
             target="_blank"
             rel="noopener"
             href="https://github.com/ReadYouApp/ReadYou/"
-            >Read You
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-              /></svg></a
+            >Read You <iconify-icon icon="mdi:external-link"></iconify-icon></a
           >（Android）
         </li>
         <li>
           <a target="_blank" rel="noopener" href="https://netnewswire.com/"
             >NetNewsWire
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-              /></svg></a
+            <iconify-icon icon="mdi:external-link"></iconify-icon></a
           >（macOS、iOS）
         </li>
       </ul>
@@ -404,14 +250,13 @@
           复制本网站 RSS 地址；<code id="rss-url"
             >https://blog.mcenahle.page/feed.xml</code
           >
-
           <button
             id="copy-btn"
             type="button"
             class="btn btn-xs btn-default"
             onclick="copyRSS()"
           >
-            复制
+            <iconify-icon icon="si:copy-line"></iconify-icon> 复制
           </button>
         </li>
         <li>打开 RSS 阅读器；</li>
