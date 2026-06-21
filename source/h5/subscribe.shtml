@@ -272,10 +272,12 @@
           document.getElementById("rss-url").innerText,
         );
 
-        document.getElementById("copy-btn").innerText = "已复制";
+        document.getElementById("copy-btn").innerHTML =
+          "<iconify-icon icon='material-symbols:check-rounded'></iconify-icon> 已复制";
 
         setTimeout(function () {
-          document.getElementById("copy-btn").innerText = "复制";
+          document.getElementById("copy-btn").innerHTML =
+            "<iconify-icon icon='si:copy-line'></iconify-icon> 复制";
         }, 2000);
       }
     </script>
