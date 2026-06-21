@@ -33,6 +33,26 @@
         font-weight: 400;
         font-style: normal;
       }
+
+      .content a {
+        outline-offset: -2px;
+        transition: outline-offset 0.3s ease;
+      }
+
+      .content a:focus {
+        outline-offset: 2px;
+      }
+
+      .content {
+        .btn {
+          outline-offset: 2px;
+          transition: outline-offset 0.3s ease;
+        }
+
+        .btn:focus {
+          outline-offset: -2px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -148,123 +168,133 @@
       </div>
     </nav>
 
-    <div style="margin-left: 12px; margin-right: 12px; margin-top: 70px">
-      <p><span class="glyphicon glyphicon-map-marker"></span> 您当前的位置：</p>
-      <ul class="breadcrumb">
-        <li>
-          <a href="/"
-            >梅之夏 <iconify-icon icon="ic:outline-link"></iconify-icon
+    <main class="content">
+      <div style="margin-left: 12px; margin-right: 12px; margin-top: 70px">
+        <p>
+          <span class="glyphicon glyphicon-map-marker"></span> 您当前的位置：
+        </p>
+        <ul class="breadcrumb">
+          <li>
+            <a href="/"
+              >梅之夏 <iconify-icon icon="ic:outline-link"></iconify-icon
+            ></a>
+          </li>
+          <li class="active">
+            <iconify-icon icon="iconoir:page"></iconify-icon> 订阅梅之夏博客 RSS
+          </li>
+        </ul>
+
+        <div class="page-header">
+          <h3>
+            什么是 RSS？
+            <small><i>信息来源：维基百科</i></small>
+          </h3>
+        </div>
+        <p style="text-indent: 2em">
+          <iconify-icon icon="mdi:rss"></iconify-icon> RSS（英文全称：RDF Site
+          Summary 或 Really Simple
+          Syndication），中文译作简易信息聚合，也称聚合内容，是一种消息来源格式规范，用以聚合多个网站更新的内容并自动通知网站订阅者。使用
+          RSS 后，网站订阅者无需手动查看网站是否有新的内容，同时 RSS
+          能将多个网站的更新集成并以摘要形式呈现，有助于订阅者快速获取重要信息，并选择性点击查看。
+        </p>
+
+        <div class="page-header">
+          <h3>本网站有 RSS 吗？</h3>
+        </div>
+        <p style="text-indent: 2em">
+          当然有啦！借助
+          <a
+            href="https://github.com/hexojs/hexo-generator-feed"
+            target="_blank"
+            rel="noopener"
+            >hexo-generator-feed
+            <iconify-icon icon="mdi:external-link"></iconify-icon
           ></a>
-        </li>
-        <li class="active">
-          <iconify-icon icon="iconoir:page"></iconify-icon> 订阅梅之夏博客 RSS
-        </li>
-      </ul>
+          插件，我给这个网站也加上了 RSS。
+        </p>
 
-      <div class="page-header">
-        <h3>
-          什么是 RSS？
-          <small><i>信息来源：维基百科</i></small>
-        </h3>
-      </div>
-      <p style="text-indent: 2em">
-        <iconify-icon icon="mdi:rss"></iconify-icon> RSS（英文全称：RDF Site
-        Summary 或 Really Simple
-        Syndication），中文译作简易信息聚合，也称聚合内容，是一种消息来源格式规范，用以聚合多个网站更新的内容并自动通知网站订阅者。使用
-        RSS 后，网站订阅者无需手动查看网站是否有新的内容，同时 RSS
-        能将多个网站的更新集成并以摘要形式呈现，有助于订阅者快速获取重要信息，并选择性点击查看。
-      </p>
-
-      <div class="page-header">
-        <h3>本网站有 RSS 吗？</h3>
-      </div>
-      <p style="text-indent: 2em">
-        当然有啦！借助
-        <a
-          href="https://github.com/hexojs/hexo-generator-feed"
-          target="_blank"
-          rel="noopener"
-          >hexo-generator-feed
-          <iconify-icon icon="mdi:external-link"></iconify-icon
-        ></a>
-        插件，我给这个网站也加上了 RSS。
-      </p>
-
-      <div class="btn-group btn-group-justified">
-        <a
-          href="/feed.xml"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary"
-          >查看 RSS <iconify-icon icon="ic:outline-link"></iconify-icon
-        ></a>
-      </div>
-
-      <p style="text-indent: 2em; margin-top: 10px">
-        通过
-        RSS，你可以随时随地的获取本网站的最新博客文章，不受制于当前的网络大数据算法。<b
-          >想看什么，你说了算！</b
-        >
-      </p>
-
-      <div class="page-header">
-        <h3>我是 RSS 小白。怎么使用 RSS？</h3>
-      </div>
-      <p style="text-indent: 2em">
-        RSS 本身只是数据格式，你需要借助 RSS 阅读器进行订阅和阅读。常见的 RSS
-        阅读器包括：
-      </p>
-      <ul>
-        <li>
-          <a target="_blank" rel="noopener" href="https://feedly.com/"
-            >Feedly <iconify-icon icon="mdi:external-link"></iconify-icon></a
-          >（网页版、Android、iOS）
-        </li>
-        <li>
+        <div class="btn-group btn-group-justified">
           <a
+            href="/feed.xml"
             target="_blank"
             rel="noopener"
-            href="https://hyliu.me/fluent-reader/"
-            >Fluent Reader
-            <iconify-icon icon="mdi:external-link"></iconify-icon></a
-          >（Windows）
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://github.com/ReadYouApp/ReadYou/"
-            >Read You <iconify-icon icon="mdi:external-link"></iconify-icon></a
-          >（Android）
-        </li>
-        <li>
-          <a target="_blank" rel="noopener" href="https://netnewswire.com/"
-            >NetNewsWire
-            <iconify-icon icon="mdi:external-link"></iconify-icon></a
-          >（macOS、iOS）
-        </li>
-      </ul>
-      <p style="text-indent: 2em">使用方法：</p>
-      <ol>
-        <li>
-          复制本网站 RSS 地址；<code id="rss-url"
-            >https://blog.mcenahle.page/feed.xml</code
+            class="btn btn-primary"
+            >查看 RSS <iconify-icon icon="ic:outline-link"></iconify-icon
+          ></a>
+        </div>
+
+        <p style="text-indent: 2em; margin-top: 10px">
+          通过
+          RSS，你可以随时随地的获取本网站的最新博客文章，不受制于当前的网络大数据算法。<b
+            >想看什么，你说了算！</b
           >
-          <button
-            id="copy-btn"
-            type="button"
-            class="btn btn-xs btn-default"
-            onclick="copyRSS()"
-          >
-            <iconify-icon icon="si:copy-line"></iconify-icon> 复制
-          </button>
-        </li>
-        <li>打开 RSS 阅读器；</li>
-        <li>点击“添加订阅”；</li>
-        <li>粘贴 RSS 地址；</li>
-        <li>完成订阅。</li>
-      </ol>
-    </div>
+        </p>
+
+        <div class="page-header">
+          <h3>我是 RSS 小白。怎么使用 RSS？</h3>
+        </div>
+        <p style="text-indent: 2em">
+          RSS 本身只是数据格式，你需要借助 RSS 阅读器进行订阅和阅读。常见的 RSS
+          阅读器包括：
+        </p>
+        <ul>
+          <li>
+            <a target="_blank" rel="noopener" href="https://feedly.com/"
+              >Feedly <iconify-icon icon="mdi:external-link"></iconify-icon></a
+            >（网页版、Android、iOS）
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://hyliu.me/fluent-reader/"
+              >Fluent Reader
+              <iconify-icon icon="mdi:external-link"></iconify-icon></a
+            >（Windows）
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/ReadYouApp/ReadYou/"
+              >Read You
+              <iconify-icon icon="mdi:external-link"></iconify-icon></a
+            >（Android）
+          </li>
+          <li>
+            <a target="_blank" rel="noopener" href="https://netnewswire.com/"
+              >NetNewsWire
+              <iconify-icon icon="mdi:external-link"></iconify-icon></a
+            >（macOS、iOS）
+          </li>
+        </ul>
+        <p style="text-indent: 2em">使用方法：</p>
+        <ol>
+          <li>
+            复制本网站 RSS 地址；<code id="rss-url"
+              >https://blog.mcenahle.page/feed.xml</code
+            >
+            <button
+              id="copy-btn"
+              type="button"
+              class="btn btn-xs btn-default"
+              onclick="copyRSS()"
+            >
+              <iconify-icon icon="si:copy-line"></iconify-icon> 复制
+            </button>
+          </li>
+          <li>打开 RSS 阅读器；</li>
+          <li>点击“添加订阅”；</li>
+          <li>粘贴 RSS 地址；</li>
+          <li>完成订阅。</li>
+        </ol>
+
+        <footer style="text-align: center; margin-bottom: 12px">
+          <hr />
+          <p>页面由 Mcenahle 制作。© 2024-2026 梅之夏。</p>
+        </footer>
+      </div>
+    </main>
 
     <script>
       function copyRSS() {
