@@ -293,7 +293,8 @@
             rel="noopener"
             target="_blank"
             ><iconify-icon icon="mdi:edit"></iconify-icon> 在 GitHub
-            上编辑此页</a
+            上编辑此页 <iconify-icon icon="mdi:external-link"></iconify-icon></a
+            ></a
           >
         </p>
 
