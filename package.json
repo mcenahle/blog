@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "quick": "hexo clean && hexo g && hexo server -p 80"
+    "quick": "hexo clean && hexo g && hexo server -p 80",
+    "ips": "hexo clean && hexo g && powershell -Command \"$ip=(Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.InterfaceAlias -like '*WLAN*'} | Select-Object -First 1 -ExpandProperty IPAddress); Write-Host ''; Write-Host 'Feed URL:' http://$ip/feed.xml; Write-Host 'Site URL:' http://$ip/; Write-Host ''\" && hexo server --host 0.0.0.0 -p 80"
   },
   "hexo": {
     "version": "7.3.0"
