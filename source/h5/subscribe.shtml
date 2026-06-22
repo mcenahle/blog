@@ -287,7 +287,17 @@
           <li>完成订阅。</li>
         </ol>
 
-        <footer style="text-align: center; margin-bottom: 12px">
+        <p style="margin-top: 24px">
+          <a
+            href="https://mn.edu.kg/gh/blog/edit/main/source/h5/subscribe.shtml"
+            rel="noopener"
+            target="_blank"
+            ><iconify-icon icon="mdi:edit"></iconify-icon> 在 GitHub
+            上编辑此页</a
+          >
+        </p>
+
+        <footer style="text-align: center; margin-bottom: 20px">
           <hr />
           <p>页面由 Mcenahle 制作。© 2024-2026 梅之夏。</p>
         </footer>
