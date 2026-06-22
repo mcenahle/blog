@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://b.mn.edu.kg
+url: https://blog.mcenahle.page
 permalink: :abbrlink/
 permalink_defaults:
 pretty_urls:
@@ -115,8 +115,8 @@ feed:
   path: feed.xml
   limit: 20
   hub:
-  content:
-  content_limit: 140
+  content: true
+  content_limit:
   content_limit_delim: " "
   order_by: -date
   icon: /img/icon.png
