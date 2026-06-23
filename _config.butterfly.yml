@@ -762,7 +762,7 @@ site_verification:
 theme_color:
   enable: true
   main: "#84ACE3"
-  #   paginator: "#00c4b6"
+  paginator: "#579EFF"
   button_hover: "#A3C3F1"
   text_selection: "#B7D1F5"
   link_color: "#7AAFFF"
