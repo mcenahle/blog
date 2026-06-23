@@ -1,0 +1,13 @@
+version: 2
+
+updates:
+  - package-ecosystem: pnpm
+    directory: "/"
+
+    schedule:
+      interval: daily
+
+    commit-message:
+      prefix: "chore"
+
+    open-pull-requests-limit: 5
