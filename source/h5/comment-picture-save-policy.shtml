@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>梅之夏博客评论区图片存储说明</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+      }
+
+      code {
+        font-family: "JetBrainsMono-Regular";
+      }
+
+      @font-face {
+        font-family: "JetBrainsMono-Regular";
+        src: url("https://mcenahle.com/fonts/JetBrainsMono-Regular.woff2")
+          format("woff2");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .content a {
+        outline-offset: -2px;
+        transition: outline-offset 0.3s ease;
+      }
+
+      .content a:focus {
+        outline-offset: 2px;
+      }
+
+      .content {
+        .btn {
+          outline-offset: 2px;
+          transition: outline-offset 0.3s ease;
+        }
+
+        .btn:focus {
+          outline-offset: -2px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#example-navbar-collapse"
+          >
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">梅之夏</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="javascript:void(0)">博客评论区图片存储说明</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener" href="/"
+                >返回主站 <iconify-icon icon="ic:outline-link"></iconify-icon
+              ></a>
+            </li>
+            <li class="dropdown">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+              >
+                友情链接
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.david03.top/"
+                    >【推荐链接】Davidの3号基地
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://www.iczrx.cn/"
+                    >晚夜的个人博客（暂离）
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://vjo.cc/"
+                    >刘郎阁
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://oba.by/"
+                    >obaby <iconify-icon icon="mdi:external-link"></iconify-icon
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://blog.真寻.top/"
+                    >兔兔博客🇨🇳
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
+                  ></a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://github.com/"
+                    ><iconify-icon icon="mdi:github"></iconify-icon> GitHub
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://developer.mozilla.org/zh-CN/"
+                    >mdn <iconify-icon icon="mdi:external-link"></iconify-icon
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.youtube.com/"
+                    >Youtube
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" rel="noopener" href="https://get.page/"
+                    >.page registry
+                    <iconify-icon icon="mdi:external-link"></iconify-icon
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div style="margin-left: 12px; margin-right: 12px; margin-top: 70px">
+        <p>
+          <span class="glyphicon glyphicon-map-marker"></span> 您当前的位置：
+        </p>
+        <ul class="breadcrumb">
+          <li>
+            <a href="/"
+              >梅之夏 <iconify-icon icon="ic:outline-link"></iconify-icon
+            ></a>
+          </li>
+          <li class="active">
+            <iconify-icon icon="iconoir:page"></iconify-icon> 博客评论区图片存储说明
+          </li>
+        </ul>
+
+        <div class="page-header">
+          <h3>
+            博客评论区图片存储说明
+          </h3>
+        </div>
+        <p>尊敬的访客：</p>
+        <p style="text-indent: 2em">感谢您访问梅之夏博客并在评论区参与交流。在上传图片前，请您了解本博客对评论区图片的存储方式。本说明仅需花费您少量时间阅读，感谢您的理解与支持。</p>
+        <ol>
+          <li>本博客评论区上传的图片存储于去不图床（杜老师说旗下图片外链平台，https://7bu.top/），并通过技术接口与评论系统 Twikoo 连接。 </li>
+          <li>图片默认长期保存。当存储空间使用量达到总额度（2GB）的一定比例时，站长可能会将部分较早上传的图片迁移至本博客的静态托管站点，并删除去不图床中的原文件，以节省存储空间。正常情况下，此类迁移不会影响图片访问。 </li>
+          <li>去不图床为付费服务，但本博客不会因图片存储服务向访客收取任何费用。 </li>
+          <li>请勿上传违法违规、侵犯他人著作权、肖像权、隐私权或其他合法权益的图片内容。站长保留删除相关图片及评论内容的权利。 </li>
+        </ol>
+        <p style="text-indent: 2em">再次感谢您的阅读，祝您在梅之夏博客浏览愉快！</p>
+
+        <p style="margin-top: 24px">
+          <a
+            href="https://mn.edu.kg/gh/blog/edit/main/source/h5/comment-picture-save-policy.shtml"
+            rel="noopener"
+            target="_blank"
+            ><iconify-icon icon="mdi:edit"></iconify-icon> 在 GitHub
+            上编辑此页 <iconify-icon icon="mdi:external-link"></iconify-icon></a
+            ></a
+          >
+        </p>
+
+        <footer style="text-align: center; margin-bottom: 20px">
+          <hr />
+          <p>页面由 Mcenahle 制作。© 2024-2026 梅之夏。</p>
+        </footer>
+      </div>
+    </main>
+
+  </body>
+</html>
