@@ -129,8 +129,8 @@ code,
 }
 .rss-btn {
   display: inline-block;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 3px;
+  margin-right: 3px;
   padding: 0px 10px;
   border-radius: 6px;
   text-decoration: none;
@@ -141,8 +141,17 @@ code,
     #894410 100%
   );
   color: #333;
-  &:hover {
+  border: solid 1px #8a5a15;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  &:hover,
+  &:focus {
     color: #333;
+    background-image: linear-gradient(
+      -45deg,
+      #ffea94 0%,
+      #d39031 59%,
+      #894410 100%
+    );
   }
 }
 
