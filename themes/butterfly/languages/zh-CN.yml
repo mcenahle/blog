@@ -40,16 +40,16 @@ search:
   load_data: 数据加载中
   input_placeholder: 搜索文章
   algolia_search:
-    hits_empty: '未找到符合您查询的内容：${query}'
-    hits_stats: '找到 ${hits} 条结果，耗时 ${time} 毫秒'
+    hits_empty: "未找到符合您查询的内容：${query}"
+    hits_stats: "找到 ${hits} 条结果，耗时 ${time} 毫秒"
   local_search:
-    hits_empty: '未找到符合您查询的内容：${query}'
-    hits_stats: '共找到 ${hits} 篇文章'
+    hits_empty: "未找到符合您查询的内容：${query}"
+    hits_stats: "共找到 ${hits} 篇文章"
 
 pagination:
   prev: 上一篇
   next: 下一篇
-  page_info: '第 ${current} 页 / 共 ${total} 页'
+  page_info: "第 ${current} 页 / 共 ${total} 页"
 
 comment: 评论
 
