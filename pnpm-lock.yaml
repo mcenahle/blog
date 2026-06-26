@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      aplayer:
+        specifier: ^1.10.1
+        version: 1.10.1
       hexo:
         specifier: ^7.0.0
         version: 7.3.0(chokidar@3.6.0)
@@ -80,6 +83,9 @@ importers:
       hexo-wordcount:
         specifier: ^6.0.1
         version: 6.0.1
+      meting:
+        specifier: ^2.0.2
+        version: 2.0.2
 
 packages:
 
@@ -1303,6 +1309,9 @@ packages:
 
   meting@1.2.0:
     resolution: {integrity: sha512-cbLMWG6Smx1X8IoBvsk0lf2ZkYdWKF07Lsq5AyoNZFLKxge+ZslQSRWn3JCihIqW1Uwr8AZ+i/w8wQznuBJUOQ==}
+
+  meting@2.0.2:
+    resolution: {integrity: sha512-MiRAvUaNJsv9KvpwbQLRux8KNe4YHv7aOkK+Ly6kYYiK8wJ9qYQvHYUnOYZT+LORbFkGrKS9xdpz/mKU51kNjw==}
 
   micro-memoize@4.2.0:
     resolution: {integrity: sha512-dRxIsNh0XosO9sd3aASUabKOzG9dloLO41g74XUGThpHBoGm1ttakPT5in14CuW/EDedkniaShFHbymmmKGOQA==}
@@ -3390,6 +3399,8 @@ snapshots:
   math-random@1.0.4: {}
 
   meting@1.2.0: {}
+
+  meting@2.0.2: {}
 
   micro-memoize@4.2.0: {}
 
