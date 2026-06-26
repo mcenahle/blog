@@ -19,6 +19,7 @@ nav:
 
 menu:
   主页: / || fas fa-home
+  博客宣传图: /promotional-image/ || fas fa-image
   列表||fas fa-list:
     追剧: /cinema/ || fas fa-film
     游戏: /games/ || fas fa-gamepad
