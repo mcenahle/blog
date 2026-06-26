@@ -33,6 +33,7 @@
     "hexo-robots": "^1.0.2",
     "hexo-server": "^3.0.0",
     "hexo-server-live": "^0.2.12",
+    "hexo-tag-aplayer": "^3.0.4",
     "hexo-tag-map": "^1.2.1",
     "hexo-tag-steamgame": "^1.0.0",
     "hexo-theme-landscape": "^1.0.0",
