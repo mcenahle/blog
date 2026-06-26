@@ -159,3 +159,6 @@ cinema: # 追剧设置
   webp: true # 是否使用 webp 格式图片
   swup: false # 是否启用swup兼容，需要主题支持
   source: bili
+
+aplayer:
+  asset_inject: false
