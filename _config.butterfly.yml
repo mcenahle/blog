@@ -267,7 +267,7 @@ footer:
   copyright:
     enable: true
     version: true
-  custom_text: <img src="https://mcenahle.cn/resources/Not%20By%20AI/Written%20By%20Human/_SVG/Written-By-Human-Not-By-AI-Badge-white.svg" alt="Written By Human Badge" width="80"> 已启用新域：https://blog.mcenahle.is-a.dev
+  custom_text: <img src="https://mcenahle.cn/resources/Not%20By%20AI/Written%20By%20Human/_SVG/Written-By-Human-Not-By-AI-Badge-white.svg" alt="Written By Human Badge" width="80"> | <a href="https://icp.gov.moe/?keyword=20260841" target="_blank"><u>萌ICP备20260841号</u></a> 已启用新域：https://blog.mcenahle.is-a.dev
 
 # --------------------------------------
 # Aside Settings
