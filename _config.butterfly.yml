@@ -1065,6 +1065,11 @@ inject:
     - <link rel="stylesheet" href="/css/custom.css">
   bottom:
     - <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    - |
+      <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token":"f86fb40783884935bcccacea4eec52e2"}'>
+      </script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
