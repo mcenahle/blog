@@ -1067,8 +1067,13 @@ inject:
     - <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
     - |
       <script defer
-        src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon='{"token":"f86fb40783884935bcccacea4eec52e2"}'>
+        src="https://analysis.mcenahle.page/script.js"
+        data-website-id="4bf7c4e0-3975-478b-b22e-084ef20d0cd8">
+      </script>
+    - |
+      <script defer
+        src="https://analysis.mcenahle.page/recorder.js"
+        data-website-id="4bf7c4e0-3975-478b-b22e-084ef20d0cd8">
       </script>
 
 # CDN Settings
