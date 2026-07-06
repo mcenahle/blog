@@ -260,6 +260,18 @@ noticeOutdate:
 # --------------------------------------
 footer:
   nav:
+    - width:
+      content:
+        - title: 加入的博客组织
+          item:
+            - title: 开往
+              url: https://www.travellings.cn/go
+            - title: blogsclub
+              url: https://www.blogsclub.org/
+            - title: 博友圈
+              url: https://www.boyouquan.com/
+            - title: BLOGS·CN
+              url: https://blogscn.fun/
   owner:
     enable: true
     since: 2024
