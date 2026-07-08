@@ -6,6 +6,7 @@ $danger: hsl(359, 100%, 65%);
 // 字体
 $font-sans: "SourceHanSansCN-Regular";
 $font-mono: "JetBrainsMono-Regular";
+$font-deyi: "SmileySans-Oblique";
 $font-weight: 400;
 $font-style: normal;
 
@@ -34,6 +35,14 @@ $point-underline: underline dotted;
   font-style: $font-style;
 }
 
+@font-face {
+  font-family: "SmileySans-Oblique";
+  src: url("/fonts/SmileySans-Oblique.otf.woff2") format("woff2");
+  font-weight: $font-weight;
+  font-style: $font-style;
+  font-display: swap;
+}
+
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
@@ -43,6 +52,16 @@ body {
 code,
 .code-toolbar {
   font-family: $font-mono !important;
+}
+
+.site-name {
+  font-family: $font-deyi;
+  letter-spacing: 1.5px;
+}
+
+.post-title {
+  font-family: $font-deyi;
+  font-size: 2.6rem;
 }
 
 .post-edit-link-wrap {
@@ -127,6 +146,7 @@ code,
     background: linear-gradient(315deg, #fff1f2 0%, #fce7f3 52%, #f5d0fe 100%);
   }
 }
+
 .rss-btn {
   display: inline-block;
   margin-left: 3px;
@@ -154,6 +174,7 @@ code,
     );
   }
 }
+
 .tag_share {
   margin-top: 30px;
 }
