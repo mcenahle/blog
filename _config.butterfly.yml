@@ -303,7 +303,7 @@ aside:
     button:
       enable: true
       icon: fab fa-github
-      text: 在 Github 上查看源代码
+      text: 在 GitHub 上查看源代码
       link: https://mn.edu.kg/gh/blog/
   card_announcement:
     enable: true
