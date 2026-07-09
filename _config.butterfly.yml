@@ -241,7 +241,7 @@ related_post:
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
-post_pagination: false
+post_pagination: 1
 
 # Displays outdated notice for a post
 noticeOutdate:
