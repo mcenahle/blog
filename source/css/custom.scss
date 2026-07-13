@@ -2,6 +2,7 @@
 $primary: hsl(201, 100%, 41%);
 $success: hsl(155, 100%, 36%);
 $danger: hsl(359, 100%, 65%);
+$selection: hsl(214, 91%, 56%);
 
 // 字体
 $font-sans: "SourceHanSansCN-Regular";
@@ -41,6 +42,12 @@ $point-underline: underline dotted;
   font-weight: $font-weight;
   font-style: $font-style;
   font-display: swap;
+}
+
+::selection {
+  background: $selection;
+  color: #fff;
+  text-shadow: none;
 }
 
 body {
