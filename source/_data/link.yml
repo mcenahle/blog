@@ -5,14 +5,14 @@
       link: https://www.david03.top/
       avatar: https://www.david03.top/favicon.ico
       descr: 一入医门深似海，从此笃行无归途
+    - name: 晚夜的个人博客
+      link: https://www.iczrx.cn
+      avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=1463656527&spec=640
+      descr: 做好量变的准备，促进事物的质变。
 
 - class_name: 友情链接
   class_desc: 那些人，那些事
   link_list:
-    - name: 晚夜的个人博客（暂离）
-      link: https://www.iczrx.cn
-      avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=1463656527&spec=640
-      descr: 做好量变的准备，促进事物的质变。
     - name: 刘郎阁
       link: https://vjo.cc
       avatar: https://vjo.cc/usr/uploads/logo.jpeg
