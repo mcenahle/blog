@@ -1,65 +1,97 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8" />
 <body
   style="
     margin: 0;
     padding: 30px;
-    background: #f5f5f5;
+    background-image: linear-gradient(
+      135deg,
+      #f8fafc 0%,
+      #e0f2fe 52%,
+      #ecfeff 100%
+    );
     font-family:
       -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;,
       &quot;Microsoft YaHei&quot;, sans-serif;
     color: #333;
   "
 >
+  <div style="font-size: 20px; font-weight: 700; margin-bottom: 24px">
+    ${SITE_NAME}
+  </div>
+
+  <p style="line-height: 1.8; margin: 0 0 20px">你好，${PARENT_NICK}：</p>
+
+  <p style="line-height: 1.8; color: #555">
+    你之前在 ${SITE_NAME} 留下的评论，收到了新的回复。
+  </p>
+
   <div
     style="
-      max-width: 600px;
-      margin: auto;
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 12px;
+      margin: 24px 0;
+      padding: 18px;
+      background: #dfe9ff;
+      border-left: 4px solid #6bb0ff;
+      border-radius: 6px;
     "
   >
-    <div style="font-size: 20px; font-weight: 700; margin-bottom: 24px">
-      ${SITE_NAME}
-    </div>
+    <div style="margin-bottom: 12px">你的评论：${PARENT_COMMENT}</div>
 
-    <p style="line-height: 1.8; margin: 0 0 20px">你好，${PARENT_NICK}：</p>
+    <div style="line-height: 1.8">${NICK} 回复：${COMMENT}</div>
+  </div>
 
-    <p style="line-height: 1.8; color: #555">
-      你之前在 ${SITE_NAME} 留下的评论，收到了新的回复。
-    </p>
+  <p style="line-height: 1.8; color: #666">
+    点击下面的链接，可以查看完整讨论：
+  </p>
 
-    <div
-      style="
-        margin: 24px 0;
-        padding: 18px;
-        background: #dfe9ff;
-        border-left: 4px solid #6bb0ff;
-        border-radius: 6px;
-      "
+  <a
+    href="${POST_URL}"
+    target="_blank"
+    style="
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+    "
+  >
+    查看文章
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
     >
-      <div style="margin-bottom: 12px">你的评论：${PARENT_COMMENT}</div>
+      <path
+        fill="currentColor"
+        d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+      />
+    </svg>
+  </a>
 
-      <div style="line-height: 1.8">${NICK} 回复：${COMMENT}</div>
-    </div>
+  <hr style="margin: 32px 0; border: none; border-top: 1px solid #eee" />
 
-    <p style="line-height: 1.8; color: #666">
-      点击下面的链接，可以查看完整讨论：
-    </p>
+  <p style="font-size: 14px; color: #888; line-height: 1.7">
+    每一条留言，都是这座小站收到的一份回应。感谢你的阅读与交流。
+  </p>
 
-    <a
-      href="${POST_URL}"
-      style="
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 18px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        text-decoration: none;
-        border-radius: 8px;
-      "
-    >
-      查看文章
+  <p style="margin-top: 20px; font-size: 14px; color: #888">
+    —— ${SITE_NAME}<br />
+    ${SITE_URL}
+  </p>
+
+  <p style="font-size: 12px; color: #888; line-height: 1.7">
+    关于 mcenahle：<i>一个安静的大专男生，喜欢写代码，也喜欢学习医学知识。</i>
+  </p>
+  <p style="font-size: 16px; color: #888; line-height: 1.7; text-align: center">
+    © 2024 - 2026 By Mcenahle。<a
+      href="https://icp.gov.moe/?keyword=20260841"
+      rel="external nofollow noreferrer"
+      target="_blank noopenner"
+      style="color: #6bb0ff; text-decoration: none"
+      ><u>萌ICP备20260841号</u>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="1em"
@@ -69,44 +101,7 @@
         <path
           fill="currentColor"
           d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-        />
-      </svg>
-    </a>
-
-    <hr style="margin: 32px 0; border: none; border-top: 1px solid #eee" />
-
-    <p style="font-size: 14px; color: #888; line-height: 1.7">
-      每一条留言，都是这座小站收到的一份回应。感谢你的阅读与交流。
-    </p>
-
-    <p style="margin-top: 20px; font-size: 14px; color: #888">
-      —— ${SITE_NAME}<br />
-      ${SITE_URL}
-    </p>
-
-    <p style="font-size: 12px; color: #888; line-height: 1.7">
-      <i>一个安静的大专男生，喜欢写代码，也喜欢学习医学知识。</i>
-    </p>
-    <p
-      style="font-size: 16px; color: #888; line-height: 1.7; text-align: center"
-    >
-      © 2024 - 2026 By Mcenahle。<a
-        href="https://icp.gov.moe/?keyword=20260841"
-        rel="external nofollow noreferrer"
-        target="_blank"
-        style="color: #6bb0ff; text-decoration: none"
-        ><u>萌ICP备20260841号</u>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1em"
-          height="1em"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="currentColor"
-            d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
-          /></svg
-      ></a>
-    </p>
-  </div>
+        /></svg
+    ></a>
+  </p>
 </body>
