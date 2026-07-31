@@ -17,6 +17,9 @@ importers:
       hexo-bilibili-bangumi:
         specifier: ^2.1.7
         version: 2.1.7
+      hexo-butterfly-charts:
+        specifier: ^1.1.6
+        version: 1.1.6
       hexo-filter-nofollow:
         specifier: ^2.0.2
         version: 2.0.2
@@ -656,6 +659,9 @@ packages:
 
   hexo-bilibili-bangumi@2.1.7:
     resolution: {integrity: sha512-+Ap1L1CAwYj+ANjK0Anslk07bfEWwPSLdHSK8M9rfN0O3u92q+bCtiH7A2h64qDQ39lSqiUVpk0jEcq56uDvEg==}
+
+  hexo-butterfly-charts@1.1.6:
+    resolution: {integrity: sha512-rGqWbq/ZJ4JmpN8cnx51prJc+JCphu4qdECQ9aEaIh/MDZAOtV//P988bc067U6Qwcm3s72M0WGDNJBlesY58A==}
 
   hexo-cli@4.3.2:
     resolution: {integrity: sha512-druJeBgLpG9ncDS5AhBHdAXk0G4CFj8Qes09pApyZ6bR+nJW1JYiDMuilhudaKDdq+1l49jWXVTidkcb7p0Jbw==}
@@ -1999,6 +2005,11 @@ snapshots:
     transitivePeerDependencies:
       - debug
       - supports-color
+
+  hexo-butterfly-charts@1.1.6:
+    dependencies:
+      cheerio: 1.2.0
+      moment: 2.30.1
 
   hexo-cli@4.3.2:
     dependencies:
