@@ -35,6 +35,13 @@ const ap = new APlayer({
       url: "/musics/To the Moon - Main Theme.mp3",
     },
     {
+      title: "Everything's Alright",
+      author: "Laura Shigihara",
+      cover: "/musics/cover/To the Moon.webp",
+      url: "/musics/Everything's Alright (Laura Shigihara).mp3",
+      lrc: "/musics/lrc/Everything's Alright (Laura Shigihara).lrc",
+    },
+    {
       title: "Lights",
       author: "Laura Shigihara",
       cover: "/musics/cover/rakuen.webp",
