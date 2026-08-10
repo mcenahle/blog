@@ -50,5 +50,12 @@ avatar: https://example.com/path/to/file.png
 descr: Website Description
 ```
 
-**方法2：**在本网站的 [友情链接管理配置文件](https://github.com/mcenahle/blog/tree/main/source/_data/link.yml) 中，[提交一个 Pull Request（PR）](https://github.com/mcenahle/blog/edit/main/source/_data/link.yml)，并等待我手动 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M5.5 3.5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-.044 2.31a2.5 2.5 0 1 0-1.706.076v4.228a2.501 2.501 0 1 0 1.5 0V8.373a5.74 5.74 0 0 0 3.86 1.864a2.501 2.501 0 1 0 .01-1.504a4.25 4.25 0 0 1-3.664-2.922ZM11.5 10.5a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-6 2a1 1 0 1 1-2 0a1 1 0 0 1 2 0" clip-rule="evenodd"/></svg> merge。_（此方法的等待时长预计为3小时-1天）_
+**方法2：**填写下方的表单。_（此方法的等待时长预计为3小时-1天）_
+
+<iframe data-tally-src="https://tally.so/embed/dWGbNz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="965" frameborder="0" marginheight="0" marginwidth="0" title="梅之夏友情链接申请"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+<script async src="https://tally.so/widgets/embed.js"></script>
+
+**方法3：**在本网站的 [友情链接管理配置文件](https://github.com/mcenahle/blog/tree/main/source/_data/link.yml) 中，[提交一个 Pull Request（PR）](https://github.com/mcenahle/blog/edit/main/source/_data/link.yml)，并等待我手动 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M5.5 3.5a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-.044 2.31a2.5 2.5 0 1 0-1.706.076v4.228a2.501 2.501 0 1 0 1.5 0V8.373a5.74 5.74 0 0 0 3.86 1.864a2.501 2.501 0 1 0 .01-1.504a4.25 4.25 0 0 1-3.664-2.922ZM11.5 10.5a1 1 0 1 0 0-2a1 1 0 0 0 0 2m-6 2a1 1 0 1 1-2 0a1 1 0 0 1 2 0" clip-rule="evenodd"/></svg> merge。_（此方法的等待时长预计为3小时-1天）_
+
 {% endnote %}
