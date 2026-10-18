@@ -1,5 +1,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="utf-8" />
+<meta name="color-scheme" content="light dark" />
+<meta name="supported-color-schemes" content="light dark" />
+<style>
+  :root {
+    color-scheme: light dark;
+    supported-color-schemes: light dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html,
+    body {
+      background-color: #111827 !important;
+      color: #e5e7eb !important;
+    }
+
+    body {
+      background-image: linear-gradient(
+        135deg,
+        #111827 0%,
+        #172638 52%,
+        #123039 100%
+      ) !important;
+    }
+
+    .mail-secondary {
+      color: #cbd5e1 !important;
+    }
+
+    .mail-muted {
+      color: #a8b5c7 !important;
+    }
+
+    .mail-comment {
+      background: #22324a !important;
+      border-left-color: #80bfff !important;
+      color: #e5e7eb !important;
+    }
+
+    a {
+      color: #93c5fd !important;
+    }
+
+    .mail-button {
+      background: linear-gradient(135deg, #4c5fb5 0%, #68418e 100%) !important;
+      color: #fff !important;
+    }
+
+    hr {
+      border-top-color: #3b4b60 !important;
+    }
+  }
+</style>
 <body
   style="
     margin: 0;
@@ -29,11 +81,12 @@
 
     <p style="line-height: 1.8; margin: 0 0 20px">你好，${PARENT_NICK}：</p>
 
-    <p style="line-height: 1.8; color: #555">
+    <p class="mail-secondary" style="line-height: 1.8; color: #555">
       你之前在 ${SITE_NAME} 留下的评论，收到了新的回复。
     </p>
 
     <div
+      class="mail-comment"
       style="
         margin: 24px 0;
         padding: 18px;
@@ -47,11 +100,12 @@
       <div style="line-height: 1.8">${NICK} 回复：${COMMENT}</div>
     </div>
 
-    <p style="line-height: 1.8; color: #666">
+    <p class="mail-secondary" style="line-height: 1.8; color: #666">
       点击下面的链接，可以查看完整讨论：
     </p>
 
     <a
+      class="mail-button"
       href="${POST_URL}"
       target="_blank"
       style="
@@ -80,19 +134,40 @@
 
     <hr style="margin: 32px 0; border: none; border-top: 1px solid #eee" />
 
-    <p style="font-size: 14px; color: #888; line-height: 1.7">
+    <p class="mail-muted" style="font-size: 14px; color: #888; line-height: 1.7">
       每一条留言，都是这座小站收到的一份回应。感谢你的阅读与交流。
     </p>
 
-    <p style="margin-top: 20px; font-size: 14px; color: #888">
+    <p class="mail-muted" style="margin-top: 20px; font-size: 14px; color: #888">
       —— ${SITE_NAME}<br />
       ${SITE_URL}
     </p>
 
-    <p style="font-size: 12px; color: #888; line-height: 1.7">
+    <p class="mail-muted" style="font-size: 12px; color: #888; line-height: 1.7">
       关于 mcenahle：<i>一个安静的大专男生，喜欢写代码，也喜欢学习医学知识。</i>
     </p>
+
+    <p class="mail-muted" style="font-size: 12px; color: #888; line-height: 1.7">
+      <a
+        href="https://mcenahle.dev"
+        rel="external nofollow noreferrer noopenner"
+        target="_blank"
+        style="color: #6bb0ff; text-decoration: none"
+        ><u>mcenahle.dev</u> ↗</a>（<a
+        href="https://mcenahle.dev/ecosystem/"
+        rel="external nofollow noreferrer noopenner"
+        target="_blank"
+        style="color: #6bb0ff; text-decoration: none"
+        ><u>网站生态系统</u> ↗</a>）| <a
+        href="https://mcenahle.edu.pl"
+        rel="external nofollow noreferrer noopenner"
+        target="_blank"
+        style="color: #6bb0ff; text-decoration: none"
+        ><u>mcenahle.edu.pl</u> ↗</a>
+    </p>
+
     <p
+      class="mail-muted"
       style="
         font-size: 13px;
         color: #888;
