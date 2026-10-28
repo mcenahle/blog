@@ -15,8 +15,8 @@ importers:
         specifier: ^2.2.1
         version: 2.2.1
       hexo-bilibili-bangumi:
-        specifier: ^2.1.7
-        version: 2.1.7
+        specifier: ^2.1.9
+        version: 2.1.9
       hexo-butterfly-charts:
         specifier: ^1.1.6
         version: 1.1.6
@@ -94,17 +94,16 @@ packages:
     resolution: {integrity: sha512-qehxGkRj55h/ff8EMaJ+cYhyaKlHIxqYDn682wQD7RNp9UujOQsHog2uS0r2vzr4pW+sXf90NeeayjcNaX3fFg==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/parser@7.29.7':
-    resolution: {integrity: sha512-hnORnjP/1P/zFEndoeX+n+t1RwWRJiJpM/jO7FW32Kn9r5+sJB2JWOdYo4L6k78j15eCwY3Gm/7364B1EMwtNg==}
+  '@babel/parser@7.29.8':
+    resolution: {integrity: sha512-E8lTAYNB1KW+FH+VGJuZM1ioAx2E6oVlvQFRrf5P8ZZmsiJXYAD9vTFV7yyEURNzgh1dFqMZuO6tUwcARbqFCA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/runtime@7.29.7':
-    resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
-    engines: {node: '>=6.9.0'}
+  '@babel/runtime@8.0.0':
+    resolution: {integrity: sha512-sL6cvO2IfkSu/iU+zs2S/w01B7A8V7suXSIKEN4hPFFdZoiPGxrj5pAG0lCaqLWiEIrjKzdznIWuaLcxPR53qw==}
 
-  '@babel/types@7.29.7':
-    resolution: {integrity: sha512-4zBIxpPzowiZpusoFkyGVwakdRJUyuH5PxQ/PrqghfdFWWasvnCdPfQXHrenDai+gyLARulZjZowCOj6fjT4pA==}
+  '@babel/types@7.29.8':
+    resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
 
   '@nodable/entities@2.1.1':
@@ -266,8 +265,8 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
-  axios@1.18.1:
-    resolution: {integrity: sha512-3nTvFlvpn9Zu/RkHUqtc7/+al4UpRW5az71ap5zccp6e8RAYEzhMTecX8Dz1wWDYrPpUoB1HAQEGEAEvUr7S9g==}
+  axios@1.19.0:
+    resolution: {integrity: sha512-ht/iuYZXEjFxLH/Hkezgd7m6JKlHHXEUSneaDz8uZe1Gj5QZtCnpyDsckvAiEnT89OEbCLmnte4R4sn7P0EKFw==}
 
   babel-walk@3.0.0-canary-5:
     resolution: {integrity: sha512-GAwkz0AihzY5bkwIY5QDR+LvsRQgB/B+1foMPvi0FZPMl5fjD7ICiznUiBdLYMH1QYe6vqu4gWYytZOccLouFw==}
@@ -276,8 +275,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  bangumi-data@0.3.210:
-    resolution: {integrity: sha512-OL99piMv2DPyLDzBYpQt6Mq5A4CoftkE5q+MrUoTifyAVCAu6mVO4kw23OVOZKwg3XtrOzeJ+hQ1pw9afh6vow==}
+  bangumi-data@0.3.219:
+    resolution: {integrity: sha512-DSMjWV6kAnvOfvySGAl5ZR+gOTZASg4RnlNWlf81Izm2jt4myoakhYPTWsPlCgrh0zA3z0OjLkipM69Txj3rjw==}
 
   basic-auth@2.0.1:
     resolution: {integrity: sha512-NF+epuEdnUYVlGuhaxbbq+dvJttwLnGY+YixlXlME5KpQ5W3CnXA5cVTneY3SPbPDRkcjMbifrwmFYcClgOZeg==}
@@ -657,8 +656,8 @@ packages:
   hexo-abbrlink@2.2.1:
     resolution: {integrity: sha512-yvazN7bbrIb7p8QU3nJ/8fbDmir1mFroYvUYcJz5xpc6DtszKggschmqZg6WNUdjhDBFyDwksrIUfwQnw0OOuA==}
 
-  hexo-bilibili-bangumi@2.1.7:
-    resolution: {integrity: sha512-+Ap1L1CAwYj+ANjK0Anslk07bfEWwPSLdHSK8M9rfN0O3u92q+bCtiH7A2h64qDQ39lSqiUVpk0jEcq56uDvEg==}
+  hexo-bilibili-bangumi@2.1.9:
+    resolution: {integrity: sha512-bHbSFi4dANh+wD7pZkditf8ZhfWR/TAaDQyO8plQMLc9MR7vWKPrAXu/WdFst3iG1SS2J8AzNOoTSm8IqHWc6Q==}
 
   hexo-butterfly-charts@1.1.6:
     resolution: {integrity: sha512-rGqWbq/ZJ4JmpN8cnx51prJc+JCphu4qdECQ9aEaIh/MDZAOtV//P988bc067U6Qwcm3s72M0WGDNJBlesY58A==}
@@ -1327,8 +1326,8 @@ packages:
     resolution: {integrity: sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==}
     engines: {node: '>=0.6.11 <=0.7.0 || >=0.7.3'}
 
-  undici@7.28.0:
-    resolution: {integrity: sha512-cRZYrTDwWznlnRiPjggAGxZXanty6M8RV1ff8Wm4LWXBp7/IG8v5DnOm74DtUBp9OONpK75YlPnIjQqX0dBDtA==}
+  undici@7.29.0:
+    resolution: {integrity: sha512-IDxfleLmmbSskfWSUATiN1nfn2rDuvnMOqb5CWR92iIfojA0Ud+ulOAAEQ57LPr9rWmsreUyf5lwyao+7GNNVw==}
     engines: {node: '>=20.18.1'}
 
   universalify@0.2.0:
@@ -1434,13 +1433,13 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.29.7': {}
 
-  '@babel/parser@7.29.7':
+  '@babel/parser@7.29.8':
     dependencies:
-      '@babel/types': 7.29.7
+      '@babel/types': 7.29.8
 
-  '@babel/runtime@7.29.7': {}
+  '@babel/runtime@8.0.0': {}
 
-  '@babel/types@7.29.7':
+  '@babel/types@7.29.8':
     dependencies:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
@@ -1561,7 +1560,7 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios@1.18.1:
+  axios@1.19.0:
     dependencies:
       follow-redirects: 1.16.0
       form-data: 4.0.6
@@ -1573,11 +1572,11 @@ snapshots:
 
   babel-walk@3.0.0-canary-5:
     dependencies:
-      '@babel/types': 7.29.7
+      '@babel/types': 7.29.8
 
   balanced-match@1.0.2: {}
 
-  bangumi-data@0.3.210: {}
+  bangumi-data@0.3.219: {}
 
   basic-auth@2.0.1:
     dependencies:
@@ -1643,7 +1642,7 @@ snapshots:
       parse5: 7.3.0
       parse5-htmlparser2-tree-adapter: 7.1.0
       parse5-parser-stream: 7.1.2
-      undici: 7.28.0
+      undici: 7.29.0
       whatwg-mimetype: 4.0.0
 
   chokidar@3.6.0:
@@ -1703,8 +1702,8 @@ snapshots:
 
   constantinople@4.0.1:
     dependencies:
-      '@babel/parser': 7.29.7
-      '@babel/types': 7.29.7
+      '@babel/parser': 7.29.8
+      '@babel/types': 7.29.8
 
   cross-spawn@7.0.6:
     dependencies:
@@ -1990,11 +1989,11 @@ snapshots:
       hexo-front-matter: 1.0.0
       hexo-fs: 3.1.0
 
-  hexo-bilibili-bangumi@2.1.7:
+  hexo-bilibili-bangumi@2.1.9:
     dependencies:
-      '@babel/runtime': 7.29.7
-      axios: 1.18.1
-      bangumi-data: 0.3.210
+      '@babel/runtime': 8.0.0
+      axios: 1.19.0
+      bangumi-data: 0.3.219
       cheerio: 1.2.0
       hexo-fs: 5.0.1
       hexo-i18n: 2.0.0
@@ -2783,7 +2782,7 @@ snapshots:
 
   tunnel@0.0.6: {}
 
-  undici@7.28.0: {}
+  undici@7.29.0: {}
 
   universalify@0.2.0: {}
 
@@ -2842,8 +2841,8 @@ snapshots:
 
   with@7.0.2:
     dependencies:
-      '@babel/parser': 7.29.7
-      '@babel/types': 7.29.7
+      '@babel/parser': 7.29.8
+      '@babel/types': 7.29.8
       assert-never: 1.4.0
       babel-walk: 3.0.0-canary-5
 
