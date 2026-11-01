@@ -98,7 +98,7 @@ footer_img: /img/MVIMG_20260527_101933.jpg
 # Website Background
 # Can set it to color, image URL or an array containing colors and/or image URLs
 # If an array is provided, a random background will be selected from the array on each load
-background: /img/MVIMG_20260530_140041.jpg
+background: /img/PixPin_2026-11-01_09-51-35.avif
 
 cover:
   # Disable the cover or not
