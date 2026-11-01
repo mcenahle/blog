@@ -50,6 +50,8 @@ block content
       script.
         const comments = new CWDComments({
           el: '#comments',
-          apiBaseUrl: 'https://api.cwd.mcenahle.page'
+          apiBaseUrl: 'https://api.cwd.mcenahle.page',
+          postSlug: window.location.pathname,
+          siteId: 'default'
         });
         comments.mount();
