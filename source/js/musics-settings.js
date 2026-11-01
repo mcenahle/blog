@@ -4,6 +4,12 @@ const ap = new APlayer({
   fixed: true,
   audio: [
     {
+      title: "To the Moon - Main Theme",
+      author: "Kan Gao",
+      cover: "/musics/cover/To the Moon.webp",
+      url: "/musics/To the Moon - Main Theme.mp3",
+    },
+    {
       title: "光荣啊，中国共青团",
       author: "中国共青团",
       cover: "/musics/cover/光荣啊，中国共青团.webp",
@@ -27,12 +33,6 @@ const ap = new APlayer({
       author: "みかん箱",
       cover: "/musics/cover/ひやむぎ、そーめん、时々うどん.webp",
       url: "/musics/ひやむぎ、そーめん、时々うどん.mp3",
-    },
-    {
-      title: "To the Moon - Main Theme",
-      author: "Kan Gao",
-      cover: "/musics/cover/To the Moon.webp",
-      url: "/musics/To the Moon - Main Theme.mp3",
     },
     {
       title: "Everything's Alright",
