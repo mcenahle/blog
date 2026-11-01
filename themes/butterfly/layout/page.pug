@@ -5,9 +5,19 @@ block content
   - var commentsJsLoad = false
 
   mixin commentLoad
-    if page.comments !== false && theme.comments.use
-      - commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
+    if page.comments !== false
+      p(style="color: black; font-size: 18px;") 评论：
+
+      #comments
+
+      script(src="/js/cwd-0.2.1.umd.js")
+
+      script.
+        const comments = new CWDComments({
+          el: '#comments',
+          apiBaseUrl: 'https://api.cwd.mcenahle.page'
+        });
+        comments.mount();
 
   #page(class=noCardLayout)
     if top_img === false && page.title
