@@ -10,3 +10,7 @@ assert.equal(links.length,32);assert.equal(new Set(links).size,32);assert.deepEq
 assert.match(fs.readFileSync('dist/2026/10/14/474/index.html','utf8'),/日期：2026\/10\/14/);
 assert.equal(JSON.parse(fs.readFileSync('dist/search.json','utf8')).length,32);
 console.log('Passed: Hexo tag boundaries, code/comments preservation, pagination completeness, historical dates, search count.');
+const rss=fs.readFileSync('dist/rss.xml','utf8');const atom=fs.readFileSync('dist/feed.xml','utf8');
+assert.equal((rss.match(/<item>/g)||[]).length,20);assert.equal((rss.match(/<content:encoded>/g)||[]).length,20);assert.match(rss,/今天送给/);assert.match(rss,/https:\/\/blog\.mcenahle\.page\/img\//);assert.doesNotMatch(rss,/\b(?:src|href)=&quot;\//);assert.equal((atom.match(/<content type="html">/g)||[]).length,20);
+const home=fs.readFileSync('dist/index.html','utf8');assert.equal((home.match(/<audio\b/g)||[]).length,1);assert.match(home,/data-astro-transition-persist="music-player"/);
+console.log('Passed: full RSS/Atom entries, absolute feed media URLs, single persistent audio player.');

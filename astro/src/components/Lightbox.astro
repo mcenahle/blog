@@ -1,0 +1,24 @@
+<dialog id="image-lightbox" aria-label="图片预览" class="image-lightbox"><div class="lightbox-toolbar"><button type="button" data-lightbox="previous" aria-label="上一张图片">←</button><span id="lightbox-count"></span><button type="button" data-lightbox="next" aria-label="下一张图片">→</button><button type="button" data-lightbox="close" aria-label="关闭图片预览">×</button></div><figure><img id="lightbox-image" alt=""/><figcaption id="lightbox-caption"></figcaption></figure></dialog>
+<script>
+let closeCurrent=()=>{};
+function setup(){
+ const dialog=document.querySelector<HTMLDialogElement>('#image-lightbox')!;
+ const preview=dialog.querySelector<HTMLImageElement>('#lightbox-image')!;
+ const caption=dialog.querySelector<HTMLElement>('#lightbox-caption')!;
+ const counter=dialog.querySelector<HTMLElement>('#lightbox-count')!;
+ const images=[...document.querySelectorAll<HTMLImageElement>('.prose img:not(.no-lightbox)')].filter(img=>!img.closest('a,button'));
+ let index=0;let opener:HTMLElement|undefined;let oldOverflow='';
+ function show(n:number){index=(n+images.length)%images.length;const img=images[index];preview.src=img.currentSrc||img.src;preview.alt=img.alt;caption.textContent=img.alt||img.title;counter.textContent=`${index+1} / ${images.length}`;}
+ function close(){if(dialog.open)dialog.close();}
+ dialog.addEventListener('close',()=>{document.documentElement.style.overflow=oldOverflow;opener?.focus();preview.removeAttribute('src');});
+ images.forEach((img,i)=>{const button=document.createElement('button');button.type='button';button.className='image-zoom';button.setAttribute('aria-label',`放大图片：${img.alt||i+1}`);img.replaceWith(button);button.append(img);button.addEventListener('click',()=>{opener=button;show(i);oldOverflow=document.documentElement.style.overflow;document.documentElement.style.overflow='hidden';dialog.showModal();});});
+ dialog.querySelector('[data-lightbox="close"]')!.addEventListener('click',close);
+ dialog.querySelector('[data-lightbox="previous"]')!.addEventListener('click',()=>show(index-1));
+ dialog.querySelector('[data-lightbox="next"]')!.addEventListener('click',()=>show(index+1));
+ dialog.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();show(index-1);}if(event.key==='ArrowRight'){event.preventDefault();show(index+1);}});
+ dialog.addEventListener('click',event=>{if(event.target===dialog)close();});
+ closeCurrent=close;
+}
+document.addEventListener('astro:page-load',setup);
+document.addEventListener('astro:before-swap',()=>closeCurrent());
+</script>

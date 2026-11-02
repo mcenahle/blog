@@ -8,7 +8,10 @@ npm ci
 npm run dev
 ```
 
-开发地址 http://127.0.0.1:14567/ 。静态验收：`npm run build` 后运行 `npm test`。静态预览：`npm run preview -- --port 14567`。不要同时运行开发服务与构建，二者共享 Astro 内容缓存。
+开发地址 http://127.0.0.1:14567/ 。静态验收：
+pm run build` 后运行
+pm test`。静态预览：
+pm run preview -- --port 14567`。不要同时运行开发服务与构建，二者共享 Astro 内容缓存。
 
 ## 已实现
 
@@ -19,8 +22,8 @@ npm run dev
 - 原生脚本本地搜索（标题/正文/标签），按需读取 search.json。
 - Hexo note、gallery、steamgame 兼容；高德地图转为可点击地图链接。转换在 Markdown AST 文本节点进行，代码块及 HTML 注释不转换。
 - 友情链接、说说复用原 YAML；追剧复用 source/_data/cinemas.json，不请求外部接口更新数据；游戏使用 Steam 官方嵌入。
-- 原宣传图/赞助页面、基础统计（月份和 Top 10 标签）、独立音乐页复用原 APlayer 播放列表、404。
-- Atom 订阅（最近 20 篇摘要）、构建后 sitemap.xml / sitemap.txt、基础 Open Graph、canonical 和 WebPage JSON-LD。
+- 原宣传图/赞助页面、基础统计（月份和 Top 10 标签）、全站常驻HTML 音频播放器复用原歌单，站内客户端导航连续播放、404。
+- RSS 2.0（/rss.xml）和 Atom（/feed.xml）全文订阅（最近 20 篇，媒体与链接转为绝对地址）、构建后 sitemap.xml / sitemap.txt、基础 Open Graph、canonical 和 WebPage JSON-LD。
 - 无时区 Hexo 时间按 Asia/Shanghai 处理；预览始终 noindex，robots 禁止抓取。
 
 ## 验证
@@ -31,11 +34,15 @@ baseline/manifest.json 与 hexo-build.log 是初始实际 Hexo 构建基线。sc
 
 ## 后续可完善
 
-- 移动端更细的视觉验收、图片灯箱、复制代码按钮、分享、完整文章结构化数据。
-- 订阅目前输出摘要，未完全复刻旧 feed 的全文；搜索输出 JSON，不兼容旧 search.xml 消费端。
+- 移动端更细的视觉验收、复制代码按钮、分享、完整文章结构化数据。
+- 搜索输出 JSON，不兼容旧 search.xml 消费端。
 - 统计尚未复刻发布日历与雷达图；追剧未实现在线刷新、进度展示和页内分页。
-- 音乐在独立页面播放，未恢复跨页持续的全站播放器；原 APlayer fixed 行为保留。
+- 音乐使用页面播放/进度/音量控件驱动 audio，避免切页后原生控件消失，需手动开始播放；站内链接/浏览器前后退保持播放，刷新、离站和打开新标签页会重新加载。尚未提供歌词和关闭浏览器后的进度恢复。
 - 图库采用响应式网格，地图采用链接；外部 Steam/B站封面是否可加载受网络影响。
 - 未接入原统计/录屏脚本。CI 和生产抓取策略尚未调整。
+
+## 图片与页面导航
+
+正文图片可点击放大，支持上一张/下一张、方向键、Esc、背景关闭和关闭后焦点恢复；已有图片链接保持原链接行为。使用原生 dialog，不引入灯箱库。客户端导航使用 Astro ClientRouter 和 transition:persist；评论组件在离页时清理，搜索与主题在 astro:page-load 后重新初始化。
 
 所有资源仅复制到 astro/public，输出到 astro/dist。原 Hexo 配置、主题与内容不修改。

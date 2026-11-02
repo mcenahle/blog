@@ -3,5 +3,8 @@ import Base from '../../layouts/Base.astro';
 ---
 <Base title="搜索"><h1 class="h2 mb-4">搜索文章</h1><label for="query" class="form-label">标题、正文或标签</label><input id="query" class="form-control" type="search" placeholder="输入关键词"/><p id="status" class="small text-body-secondary mt-3" role="status">输入关键词开始搜索</p><div id="results" class="post-list"></div></Base>
 <script>
+document.addEventListener('astro:page-load',()=>{
+if(!document.querySelector('#query'))return;
 const input=document.querySelector<HTMLInputElement>('#query')!;const status=document.querySelector('#status')!;const results=document.querySelector('#results')!;let data:any[]|undefined;let timer:ReturnType<typeof setTimeout>;let revision=0;input.addEventListener('input',()=>{clearTimeout(timer);const current=++revision;timer=setTimeout(async()=>{const query=input.value.trim().toLocaleLowerCase();results.replaceChildren();if(!query){status.textContent='输入关键词开始搜索';return;}try{data??=await fetch('/search.json').then(r=>{if(!r.ok)throw new Error();return r.json();});if(current!==revision)return;const matches=data!.filter(p=>(p.title+' '+p.text+' '+p.tags.join(' ')).toLocaleLowerCase().includes(query));status.textContent=`找到 ${matches.length} 篇文章`;for(const p of matches){const article=document.createElement('article');article.className='py-3 border-bottom';const link=document.createElement('a');link.href=p.url;link.textContent=p.title;link.className='h5';article.append(link);results.append(article);}}catch{status.textContent='搜索索引加载失败，请重试。';}},150);});
+});
 </script>

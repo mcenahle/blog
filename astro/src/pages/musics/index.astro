@@ -1,7 +1,5 @@
 ---
 import Base from '../../layouts/Base.astro';
+import {playlist} from '../../lib/playlist';
 ---
-<Base title="音乐"><h1 class="h2 mb-4">听一会儿音乐</h1><div id="aplayer"></div><noscript>播放器需要启用 JavaScript。</noscript></Base>
-<script>
-const style=document.createElement('link');style.rel='stylesheet';style.href='/musics/css-js/APlayer.min.css';document.head.append(style);const script=document.createElement('script');script.src='/musics/css-js/APlayer.min.js';script.onload=()=>{const settings=document.createElement('script');settings.src='/js/musics-settings.js';document.body.append(settings);};document.body.append(script);
-</script>
+<Base title="音乐"><h1 class="h2 mb-4">听一会儿音乐</h1><p class="text-body-secondary">在底部播放器选择歌曲、控制播放。站内切换页面时，音乐会继续播放。</p><ol class="list-group list-group-numbered">{playlist.map(track=><li class="list-group-item bg-body d-flex justify-content-between gap-3"><span class="ms-2 me-auto">{track.title}</span><span class="text-body-secondary small">{track.author}</span></li>)}</ol><noscript>跨页连续播放需要启用 JavaScript。</noscript></Base>

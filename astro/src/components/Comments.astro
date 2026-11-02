@@ -2,8 +2,4 @@
 const {slug}=Astro.props;
 ---
 <section class="domain-card bg-body shadow-sm overflow-hidden rounded-3 mt-4" aria-label="评论"><div class="py-3 px-4 border-bottom"><h2 class="h5 mb-0">评论</h2></div><div class="p-4"><p id="comment-status" class="small text-body-secondary" role="status">正在加载评论…</p><div id="comments" data-slug={slug}></div><button id="retry-comments" class="btn btn-sm btn-outline-secondary mt-3" hidden>重新加载评论区</button></div></section>
-<script>
-const root=document.querySelector<HTMLElement>('#comments');const status=document.querySelector<HTMLElement>('#comment-status')!;const retry=document.querySelector<HTMLButtonElement>('#retry-comments')!;
-async function load(){retry.hidden=true;status.hidden=false;status.textContent='正在加载评论…';try{if(!(window as any).CWDComments)await new Promise<void>((resolve,reject)=>{const script=document.createElement('script');script.src='/js/cwd-0.2.1.umd.js';script.onload=()=>resolve();script.onerror=()=>{script.remove();reject(new Error('script'));};document.head.append(script);});const CWD=(window as any).CWDComments;const client=new CWD({theme:document.documentElement.dataset.bsTheme||'light',el:'#comments',apiBaseUrl:'https://api.cwd.mcenahle.page',postSlug:root!.dataset.slug,siteId:'default'});client.mount();const observer=new MutationObserver(()=>client.updateConfig({theme:document.documentElement.dataset.bsTheme||'light'}));observer.observe(document.documentElement,{attributes:true,attributeFilter:['data-bs-theme']});status.hidden=true;}catch{status.textContent='评论暂时无法加载，请稍后重试。';}finally{retry.hidden=false;}}
-retry.addEventListener('click',()=>location.reload());if(root)void load();
-</script>
+<script src="../scripts/comments.ts"/>

@@ -1,0 +1,28 @@
+---
+import {playlist} from '../lib/playlist';
+---
+<aside id="music-player" transition:persist="music-player" class="music-player bg-body border-top shadow-sm" aria-label="音乐播放器"><div class="container d-flex flex-wrap align-items-center gap-2 py-2"><label for="music-track" class="small">音乐</label><select id="music-track" class="form-select form-select-sm" aria-label="选择音乐">{playlist.map(track=><option value={track.url}>{track.title} — {track.author}</option>)}</select><button id="music-previous" class="btn btn-sm btn-outline-secondary" aria-label="上一曲">‹</button><button id="music-toggle" class="btn btn-sm btn-outline-secondary" aria-label="播放音乐">播放</button><audio id="music-audio" preload="none" src={playlist[0].url} hidden></audio><div class="music-progress d-flex align-items-center gap-2"><span id="music-time" class="small text-body-secondary text-nowrap">0:00 / 0:00</span><input id="music-seek" type="range" class="form-range mb-0" min="0" max="100" value="0" step="0.1" aria-label="播放进度" disabled/></div><button id="music-next" class="btn btn-sm btn-outline-secondary" aria-label="下一曲">›</button><label for="music-volume" class="small">音量</label><input id="music-volume" type="range" class="form-range mb-0 music-volume" min="0" max="1" step="0.05" value="1" aria-label="音量"/><span id="music-status" class="small text-body-secondary" role="status"></span></div></aside>
+<script>
+const audio=document.querySelector<HTMLAudioElement>('#music-audio')!;
+const select=document.querySelector<HTMLSelectElement>('#music-track')!;
+const status=document.querySelector<HTMLElement>('#music-status')!;
+const toggle=document.querySelector<HTMLButtonElement>('#music-toggle')!;
+const seek=document.querySelector<HTMLInputElement>('#music-seek')!;
+const volume=document.querySelector<HTMLInputElement>('#music-volume')!;
+const time=document.querySelector<HTMLElement>('#music-time')!;
+const format=(seconds:number)=>{if(!Number.isFinite(seconds))return '0:00';const n=Math.floor(seconds);return `${Math.floor(n/60)}:${String(n%60).padStart(2,'0')}`;};
+function sync(){const playing=!audio.paused&&!audio.ended;toggle.textContent=playing?'暂停':'播放';toggle.setAttribute('aria-label',playing?'暂停音乐':'播放音乐');seek.disabled=!Number.isFinite(audio.duration)||audio.duration<=0;seek.value=seek.disabled?'0':String(audio.currentTime/audio.duration*100);time.textContent=`${format(audio.currentTime)} / ${format(audio.duration)}`;}
+async function play(){status.textContent='';try{await audio.play();}catch{status.textContent='暂时无法播放，请重试或切换歌曲。';}sync();}
+async function change(index:number){select.selectedIndex=(index+select.options.length)%select.options.length;audio.src=select.value;sync();await play();}
+toggle.addEventListener('click',()=>{if(audio.paused)void play();else audio.pause();});
+seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration))audio.currentTime=Number(seek.value)/100*audio.duration;sync();});
+volume.addEventListener('input',()=>{audio.volume=Number(volume.value);});
+select.addEventListener('change',()=>void change(select.selectedIndex));
+document.querySelector('#music-previous')!.addEventListener('click',()=>void change(select.selectedIndex-1));
+document.querySelector('#music-next')!.addEventListener('click',()=>void change(select.selectedIndex+1));
+for(const event of ['play','pause','timeupdate','loadedmetadata','durationchange','emptied','ended'])audio.addEventListener(event,sync);
+audio.addEventListener('ended',()=>void change(select.selectedIndex+1));
+audio.addEventListener('error',()=>{status.textContent='此曲加载失败，请尝试下一曲。';sync();});
+document.addEventListener('astro:page-load',sync);
+sync();
+</script>
