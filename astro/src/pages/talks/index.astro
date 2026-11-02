@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+import {readData} from '../../lib/data';
+import {markdown} from '../../lib/markdown';
+const talks=await Promise.all(readData('shuoshuo').map(async(talk:any)=>({...talk,html:await markdown(talk.content)})));
+---
+<Base title="说说"><h1 class="h2 mb-4">说说</h1>{talks.map((talk:any)=><article class="bg-body shadow-sm rounded-3 p-4 mb-4"><header class="d-flex gap-3 align-items-center mb-3"><img src={talk.avatar} alt="" width="40" height="40" class="rounded-circle"/><div><strong>{talk.author}</strong><div class="small text-body-secondary">{String(talk.date)}</div></div></header><div class="prose" set:html={talk.html}/></article>)}</Base>

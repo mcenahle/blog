@@ -1,0 +1,8 @@
+---
+import Base from '../layouts/Base.astro';
+import Comments from '../components/Comments.astro';
+import {getCollection,render} from 'astro:content';
+export async function getStaticPaths(){return(await getCollection('pages')).map(page=>({params:{special:page.id.split('/')[0]},props:{page}}));}
+const {page}=Astro.props;const {Content}=await render(page);
+---
+<Base title={page.data.title}><div class="reading mx-auto"><article class="domain-card bg-body rounded-3 shadow-sm overflow-hidden"><header class="py-3 px-4 border-bottom"><h1 class="fs-5 fw-bold mb-0">{page.data.title}</h1></header><div class="prose p-4"><Content/></div></article>{page.data.comments!==false&&<Comments slug={`/${Astro.params.special}/`}/>}</div></Base>

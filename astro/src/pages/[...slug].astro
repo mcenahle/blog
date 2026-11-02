@@ -1,0 +1,10 @@
+---
+import {getCollection,render} from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Comments from '../components/Comments.astro';
+import {date,names} from '../lib/posts';
+export async function getStaticPaths(){return(await getCollection('posts')).map(post=>({params:{slug:post.data.abbrlink},props:{post}}));}
+const {post}=Astro.props;const {Content,headings}=await render(post);
+const all=(await getCollection('posts')).sort((a,b)=>b.data.date.valueOf()-a.data.date.valueOf());const index=all.findIndex(p=>p.id===post.id);
+---
+<Base title={post.data.title} description={post.data.description}><div class="reading mx-auto"><a href="/" class="small">← 所有文章</a><article class="domain-card bg-body shadow-sm overflow-hidden rounded-3 mt-3"><header class="domain-card-header py-3 px-4 border-bottom"><h1 class="fs-5 fw-bold mb-0">{post.data.title}</h1><div class="d-flex align-items-center justify-content-between flex-wrap gap-2"><time class="small text-body-secondary mt-2" datetime={post.data.date.toISOString()}>日期：{date(post.data.date)}</time><div class="small mt-2">{names(post.data.tags).map(tag=><a class="me-2" href={`/tags/${encodeURIComponent(tag.replace(/\s+/g,'-'))}/`}>#{tag}</a>)}</div></div></header><div class="domain-card-body p-4 lh2">{headings.length>2&&<details class="mb-4 border-bottom pb-3"><summary>文章目录</summary><ul class="mt-2 small">{headings.filter(h=>h.depth<4).map(h=><li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul></details>}<div class="prose"><Content/></div></div></article><nav class="d-flex justify-content-between gap-4 mt-4 small" aria-label="相邻文章">{all[index+1]?<a href={`/${all[index+1].data.abbrlink}/`}>← {all[index+1].data.title}</a>:<span/>}{all[index-1]&&<a href={`/${all[index-1].data.abbrlink}/`}>{all[index-1].data.title} →</a>}</nav>{post.data.comments!==false&&<Comments slug={`/${post.data.abbrlink}/`}/>}</div></Base>

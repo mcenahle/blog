@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):[path.join(d,e.name)]);
+const urls=walk('dist').filter(f=>f.endsWith('.html')&&!f.endsWith('404.html')).map(f=>'https://blog.mcenahle.page/'+path.relative('dist',f).replaceAll('\\','/').replace(/index\.html$/,''));
+const xml=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;');
+fs.writeFileSync('dist/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${xml(u)}</loc></url>`).join('')}</urlset>`);
+fs.writeFileSync('dist/sitemap.txt',urls.join('\n')+'\n');
+const baseline=JSON.parse(fs.readFileSync('baseline/manifest.json','utf8'));const missing=baseline.posts.filter(p=>!fs.existsSync('dist'+p.url+'index.html'));if(missing.length)throw new Error('Missing historical post URLs: '+JSON.stringify(missing));
+const missingPages=baseline.htmlUrls.filter(u=>u.endsWith('/')&&!fs.existsSync('dist'+u+'index.html'));if(missingPages.length)throw new Error('Missing historical pages: '+JSON.stringify(missingPages));
+const raw=walk('dist').filter(f=>f.endsWith('.html')).filter(f=>/\{%\s*(note|endnote|gallery|endgallery|steamgame|gaodeMap)\b/.test(fs.readFileSync(f,'utf8').replace(/<!--[\s\S]*?-->/g,'')));if(raw.length)throw new Error('Unconverted Hexo tags: '+raw.join(', '));
+console.log(`Verified ${baseline.posts.length} historical article URLs, ${urls.length} sitemap URLs.`);

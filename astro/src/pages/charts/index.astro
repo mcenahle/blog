@@ -1,0 +1,6 @@
+---
+import Base from '../../layouts/Base.astro';
+import {posts,names} from '../../lib/posts';
+const all=await posts();const months=new Map<string,number>();for(const p of all){const key=p.data.date.toISOString().slice(0,7);months.set(key,(months.get(key)||0)+1);}const tags=new Map<string,number>();for(const p of all)for(const tag of names(p.data.tags))tags.set(tag,(tags.get(tag)||0)+1);
+---
+<Base title="图表统计"><h1 class="h2 mb-4">图表统计</h1><p class="text-body-secondary">共 {all.length} 篇文章 · {tags.size} 个标签</p><div class="row g-4"><section class="col-md-6"><div class="bg-body rounded-3 p-4"><h2 class="h5 mb-4">文章发布统计</h2>{[...months].reverse().map(([month,count])=><div class="mb-3"><div class="d-flex justify-content-between small"><span>{month}</span><span>{count} 篇</span></div><meter min="0" max={Math.max(...months.values())} value={count} class="w-100" aria-label={`${month}：${count} 篇`}/></div>)}</div></section><section class="col-md-6"><div class="bg-body rounded-3 p-4"><h2 class="h5 mb-4">Top 10 标签</h2>{[...tags].sort((a,b)=>b[1]-a[1]).slice(0,10).map(([tag,count])=><p class="d-flex justify-content-between"><a href={`/tags/${encodeURIComponent(tag.replace(/\s+/g,'-'))}/`}>{tag}</a><span>{count}</span></p>)}</div></section></div></Base>

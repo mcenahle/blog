@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+import Comments from '../../components/Comments.astro';
+import {readData} from '../../lib/data';
+const groups=readData('link');
+---
+<Base title="友情链接"><h1 class="h2 mb-4">友情链接</h1>{groups.map((group:any)=><section class="mb-5"><h2 class="h4">{group.class_name}</h2><p class="text-body-secondary">{group.class_desc}</p><div class="row g-3">{group.link_list?.map((link:any)=><div class="col-md-6"><a class="d-flex gap-3 p-4 h-100 bg-body rounded-3 shadow-sm" href={link.link} target="_blank" rel="noopener noreferrer"><img src={link.avatar} alt="" width="48" height="48" loading="lazy" class="rounded-circle"/><div><h3 class="h6">{link.name}</h3><p class="small text-body-secondary mb-0">{link.descr}</p></div></a></div>)}</div></section>)}<p>申请友链请在下方留言，附上网站名称、链接和简介。</p><Comments slug="/link/"/></Base>

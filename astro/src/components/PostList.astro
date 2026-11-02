@@ -1,0 +1,8 @@
+---
+import {date,pageUrl} from '../lib/posts';
+const {posts,title='文章',page=1,total=1,base='/',intro=false}=Astro.props;
+---
+{intro&&<section class="mb-5"><p class="text-body-secondary small">生活 · 记录 · 探索</p><h1 class="display-5 fw-semibold">把值得记住的，写下来。</h1><p class="text-body-secondary mt-3">这里是梅之夏。慢慢读，随意逛。</p></section>}
+{!intro&&<h1 class="h2 mb-4">{title}</h1>}
+<section aria-label={title} class="post-list">{posts.map((post:any)=><article class="py-4 border-top"><time class="small text-body-secondary" datetime={post.data.date.toISOString()}>{date(post.data.date)}</time><h2 class="h4 mt-2"><a href={`/${post.data.abbrlink}/`}>{post.data.title}</a></h2>{post.data.description&&<p class="text-body-secondary mb-0">{post.data.description}</p>}</article>)}</section>
+{total>1&&<nav aria-label="分页" class="mt-4"><ul class="pagination flex-wrap gap-1">{Array.from({length:total},(_,i)=>i+1).map(n=><li class:list={['page-item',{active:n===page}]}><a class="page-link rounded" href={pageUrl(base,n)} aria-current={n===page?'page':undefined}>{n}</a></li>)}</ul></nav>}

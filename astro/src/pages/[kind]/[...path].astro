@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostList from '../../components/PostList.astro';
+import {posts,names,PAGE_SIZE} from '../../lib/posts';
+export async function getStaticPaths(){
+ const all=await posts();
+ const paths:any[]=[];
+ for(const kind of ['tags','categories','archives']){
+  const groups=new Map<string,typeof all>();
+  if(kind==='archives'){
+   groups.set('',all);
+   for(const post of all){
+    const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit'}).formatToParts(post.data.date);
+    const year=parts.find(p=>p.type==='year')!.value;
+    const month=parts.find(p=>p.type==='month')!.value;
+    for(const key of [year,`${year}/${month}`])groups.set(key,[...(groups.get(key)||[]),post]);
+   }
+  }else{
+   for(const post of all)for(const name of names(post.data[kind]))groups.set(name,[...(groups.get(name)||[]),post]);
+  }
+  for(const [name,items] of groups){
+   const slug=name.replace(/\s+/g,'-');
+   const prefix=slug?slug+'/':'';
+   const base=`/${kind}/${prefix}`;
+   for(let page=1;page<=Math.ceil(items.length/PAGE_SIZE);page++){
+    paths.push({params:{kind,path:(prefix+(page===1?'':`page/${page}/`))||undefined},props:{items,page,base,title:kind==='archives'?`归档 ${name}`:`${kind==='tags'?'标签':'分类'}：${name}`}});
+   }
+  }
+ }
+ return paths;
+}
+const {items,page,base,title}=Astro.props;
+---
+<Base title={title}><PostList posts={items.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE)} {page} total={Math.ceil(items.length/PAGE_SIZE)} {base} {title}/></Base>

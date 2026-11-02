@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="音乐"><h1 class="h2 mb-4">听一会儿音乐</h1><div id="aplayer"></div><noscript>播放器需要启用 JavaScript。</noscript></Base>
+<script>
+const style=document.createElement('link');style.rel='stylesheet';style.href='/musics/css-js/APlayer.min.css';document.head.append(style);const script=document.createElement('script');script.src='/musics/css-js/APlayer.min.js';script.onload=()=>{const settings=document.createElement('script');settings.src='/js/musics-settings.js';document.body.append(settings);};document.body.append(script);
+</script>

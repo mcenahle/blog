@@ -1,0 +1,8 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostList from '../../components/PostList.astro';
+import {posts,PAGE_SIZE} from '../../lib/posts';
+export async function getStaticPaths(){const all=await posts();return Array.from({length:Math.ceil(all.length/PAGE_SIZE)-1},(_,i)=>({params:{number:String(i+2)},props:{all,page:i+2}}));}
+const {all,page}=Astro.props;
+---
+<Base title={`文章 · 第 ${page} 页`}><PostList posts={all.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE)} page={page} total={Math.ceil(all.length/PAGE_SIZE)} intro/></Base>

@@ -1,0 +1,6 @@
+---
+import Base from '../../layouts/Base.astro';
+import {posts,names} from '../../lib/posts';
+const all=await posts();const groups=new Map<string,number>();for(const p of all)for(const name of names(p.data.tags))groups.set(name,(groups.get(name)||0)+1);
+---
+<Base title="标签"><h1 class="h2 mb-4">标签</h1><div class="d-flex flex-wrap gap-3">{[...groups].map(([name,count])=><a class="btn btn-outline-secondary" href={`/tags/${encodeURIComponent(name.replace(/\s+/g,'-'))}/`}>{name} <span class="badge text-bg-secondary">{count}</span></a>)}</div></Base>
