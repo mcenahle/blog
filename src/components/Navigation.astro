@@ -1,0 +1,15 @@
+---
+const links=[['/','文章'],['/archives/','归档'],['/categories/','分类'],['/tags/','标签'],['/search/','搜索'],['/link/','友链'],['/talks/','说说'],['/cinema/','追剧'],['/games/','游戏'],['/musics/','音乐'],['/charts/','统计']];
+const current=Astro.url.pathname;
+---
+<header class="border-bottom bg-body"><nav class="container site-nav py-3" aria-label="主导航"><a class="brand" href="/">梅之夏<span class="d-block small text-body-secondary">Explore. Dream. Discover.</span></a><button id="nav-toggle" class="navbar-toggler nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="展开导航菜单" hidden><span class="navbar-toggler-icon" aria-hidden="true"></span><span class="small ms-2">菜单</span></button><div id="nav-menu" class="nav-menu"><ul class="navbar-nav nav-links">{links.map(([href,label])=><li class="nav-item"><a class:list={['nav-link',{active:href==='/'?(current==='/'||current.startsWith('/page/')):current.startsWith(href)}]} href={href} aria-current={(href==='/'?(current==='/'||current.startsWith('/page/')):current.startsWith(href))?'page':undefined}>{label}</a></li>)}</ul><label class="small nav-theme">外观 <select id="theme" class="form-select form-select-sm d-inline-block w-auto" aria-label="外观模式"><option value="auto">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option></select></label></div></nav></header>
+<script>
+document.addEventListener('astro:page-load',()=>{
+ const button=document.querySelector<HTMLButtonElement>('#nav-toggle');const menu=document.querySelector<HTMLElement>('#nav-menu');if(!button||!menu)return;
+ button.hidden=false;menu.dataset.ready='true';
+ function set(open:boolean){button!.setAttribute('aria-expanded',String(open));button!.setAttribute('aria-label',open?'收起导航菜单':'展开导航菜单');menu!.classList.toggle('is-open',open);}
+ button.addEventListener('click',()=>set(button.getAttribute('aria-expanded')!=='true'));
+ menu.addEventListener('click',event=>{if((event.target as Element).closest('a'))set(false);});
+ menu.addEventListener('keydown',event=>{if(event.key==='Escape'){set(false);button.focus();}});
+});
+</script>
