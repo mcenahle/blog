@@ -1,0 +1,8 @@
+---
+import fs from 'node:fs';
+import Base from '../../layouts/Base.astro';
+import Comments from '../../components/Comments.astro';
+const data=JSON.parse(fs.readFileSync('src/data/legacy/cinemas.json','utf8'));
+const groups=[['watching','在看'],['wantWatch','想看'],['watched','看过']];
+---
+<Base title="追剧列表"><h1 class="h2 mb-3">追剧列表</h1><p class="text-body-secondary">生命不息，追剧不止！</p>{groups.map(([key,label])=><section class="my-5"><h2 class="h4 mb-4">{label} <span class="text-body-secondary small">{data[key].length}</span></h2><div class="row g-3">{data[key].map((item:any)=><article class="col-md-6"><div class="d-flex bg-body p-3 rounded-3 h-100 gap-3"><img src={item.cover} alt="" loading="lazy" referrerpolicy="no-referrer" width="90" height="120" style="object-fit:cover"/><div><h3 class="h6"><a href={`https://www.bilibili.com/bangumi/media/md${item.id}/`} target="_blank" rel="noopener noreferrer">{item.title}</a></h3><p class="small text-body-secondary">{item.type} · {item.area} · {item.totalCount}</p><p class="small mb-0">{item.des}</p></div></div></article>)}</div></section>)}<Comments slug="/cinema/"/></Base>

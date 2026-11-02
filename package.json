@@ -1,42 +1,26 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
-  "private": true,
+  "name": "meizhixia-blog",
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server",
-    "quick": "hexo clean && hexo g && hexo server -p 80",
-    "ips": "hexo clean && hexo g && powershell -Command \"$ip=(Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.InterfaceAlias -like '*WLAN*'} | Select-Object -First 1 -ExpandProperty IPAddress); Write-Host ''; Write-Host 'Feed URL:' http://$ip/feed.xml; Write-Host 'Site URL:' http://$ip/; Write-Host ''\" && hexo server --host 0.0.0.0 -p 80"
+    "dev": "astro dev --host 127.0.0.1 --port 14567",
+    "build": "astro build && node scripts/verify.mjs",
+    "preview": "astro preview --host 127.0.0.1 --port 14567",
+    "test": "node scripts/test.mjs"
   },
-  "hexo": {
-    "version": "7.3.0"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "type": "module",
   "dependencies": {
-    "hexo": "^7.0.0",
-    "hexo-abbrlink": "^2.2.1",
-    "hexo-bilibili-bangumi": "^2.1.9",
-    "hexo-butterfly-charts": "^1.1.6",
-    "hexo-filter-nofollow": "^2.0.2",
-    "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-category": "^2.0.0",
-    "hexo-generator-feed": "^4.0.0",
-    "hexo-generator-index": "^3.0.0",
-    "hexo-generator-search": "^2.4.3",
-    "hexo-generator-sitemap": "^3.0.1",
-    "hexo-generator-tag": "^2.0.0",
-    "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^6.0.0",
-    "hexo-renderer-pug": "^3.0.0",
-    "hexo-renderer-sass": "^0.5.0",
-    "hexo-renderer-stylus": "^3.0.1",
-    "hexo-robots": "^1.0.4",
-    "hexo-server": "^3.0.0",
-    "hexo-server-live": "^0.2.12",
-    "hexo-tag-map": "^1.2.1",
-    "hexo-tag-steamgame": "^1.0.0",
-    "hexo-theme-landscape": "^1.0.0",
-    "hexo-wordcount": "^6.0.1"
-  }
+    "@astrojs/markdown-remark": "^7.3.5",
+    "astro": "^7.4.4",
+    "bootstrap": "5.3.8",
+    "yaml": "^2.9.1"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "packageManager": "pnpm@10.27.0"
 }

@@ -1,37 +1,20 @@
 name: Mac Check
-
 on:
   push:
   pull_request:
   workflow_dispatch:
   schedule:
     - cron: "23 */6 * * *"
-
 jobs:
   build:
     runs-on: macos-latest
-
     steps:
-      - name: Show system info
-        run: |
-          sw_vers
-          uname -a
-
       - uses: actions/checkout@v5
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v6.0.5
+      - uses: pnpm/action-setup@v6.0.5
+      - uses: actions/setup-node@v5
         with:
-          version: 10
-
-      - name: Setup Node
-        uses: actions/setup-node@v5
-        with:
-          node-version: 20
+          node-version: 24
           cache: pnpm
-
-      - name: Install deps
-        run: pnpm install --frozen-lockfile
-
-      - name: Build
-        run: pnpm run build
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm test
