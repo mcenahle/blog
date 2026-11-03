@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Inter";
+  src: url("https://mcenahle.edu.pl/fonts/InterVariable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("https://mcenahle.edu.pl/fonts/InterVariable-Italic.woff2")
+    format("woff2");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.mywords {
+  width: 1200px;
+  max-width: calc(100% - 32px);
+  margin: 20px auto;
+
+  overflow-wrap: break-word;
+
+  img {
+    max-width: 100%;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .mywords {
+    margin: 20px 16px;
+  }
+}
+
+svg {
+  margin-left: 4px;
+}
