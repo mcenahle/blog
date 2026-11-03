@@ -20,54 +20,66 @@ const { frontmatter } = Astro.props;
       </ol>
     </nav>
 
-    <h2 style="font-size: 30px; margin-top: 30px;">
-      {frontmatter.title}
-    </h2>
-
-    <div class="post-meta">
-      <span>
-        <Icon name="mdi:calendar" />
-        发布于：{frontmatter.date}
-      </span>
-    </div>
-
-    <!-- Example split danger button -->
-    <div class="d-flex justify-content-end">
-      <div class="btn-group">
+    <div class="domain-card bg-white shadow-sm overflow-hidden rounded-3">
+      <div class="domain-card-header py-3 px-4 border-bottom">
+        <div class="text-black fs-5 fw-bold">
+          {frontmatter.title}
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="small text-muted mt-2">
+            <Icon name="mdi:calendar" />
+            发布于：{frontmatter.date}
+          </div>
+          <div class="share-warp small text-muted mt-2">
+            <div class="d-flex justify-content-end">
+              <div class="btn-group">
+                <a
+                  href="https://github.com/mcenahle/blog/"
+                  target="_blank"
+                  class="btn btn-primary btn-sm"
+                  >查看 GitHub 源代码 <Icon name="mdi:open-in-new" /></a
+                >
+                <button
+                  type="button"
+                  class="btn btn-primary btn-sm active dropdown-toggle dropdown-toggle-split"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul
+                  class="dropdown-menu m-0 border-0 shadow-sm p-2 dropdown-menu-end"
+                  data-bs-popper="none"
+                >
+                  <li>
+                    <button
+                      class="dropdown-item px-3 py-2 rounded"
+                      id="ask-gpt"
+                    >
+                      <ChatGPT /> 询问 ChatGPT <Icon
+                        name="mdi:open-in-new"
+                      /></button
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="domain-card-body p-4 lh2">
+        <div class="posts" style="margin-top: 12px; margin-bottom: 30px;">
+          <slot />
+        </div>
         <a
-          href="https://github.com/mcenahle/blog/"
-          target="_blank"
-          class="btn btn-primary"
-          >查看 GitHub 源代码 <Icon name="mdi:open-in-new" /></a
+          href="/"
+          class="btn btn-outline-secondary"
+          style="margin-bottom: 30px;"
         >
-        <button
-          type="button"
-          class="btn btn-primary active dropdown-toggle dropdown-toggle-split"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+          <Icon name="mdi:arrow-left" /> 返回首页</a
         >
-          <span class="visually-hidden">Toggle Dropdown</span>
-        </button>
-        <ul
-          class="dropdown-menu m-0 border-0 shadow-sm p-2 dropdown-menu-end"
-          data-bs-popper="none"
-        >
-          <li>
-            <button class="dropdown-item px-3 py-2 rounded" id="ask-gpt">
-              <ChatGPT /> 询问 ChatGPT <Icon name="mdi:open-in-new" /></button
-            >
-          </li>
-        </ul>
       </div>
     </div>
-
-    <div class="posts" style="margin-top: 12px; margin-bottom: 30px;">
-      <slot />
-    </div>
-
-    <a href="/" class="btn btn-outline-secondary" style="margin-bottom: 30px;">
-      <Icon name="mdi:arrow-left" /> 返回首页</a
-    >
 
     <Comments />
   </div>
