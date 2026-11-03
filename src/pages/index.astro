@@ -2,6 +2,14 @@
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 
+const allPosts = Object.values(
+  import.meta.glob("./posts/*.md", { eager: true }),
+).sort(
+  (a: any, b: any) =>
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime(),
+);
+
 import { Icon } from "astro-icon/components";
 
 const title = "";
@@ -10,91 +18,43 @@ const title = "";
 <Layout title={title}>
   <div class="mywords">
     <h2>梅之夏</h2>
-    <p>
-      <a href="https://www.example.com" target="_blank"
-        ><u>11</u><Icon name="mdi:open-in-new" /></a
-      >
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipiscing elit, obcaecati alias
-      corrupti magna. Saepe accusamus irure et ea commodo soluta irure veniam,
-      atque dolor saepe quia expedita. Dolore aliqua pariatur tempor, nihil
-      culpa quas cupidatat.
-    </p>
-    <p>
-      Mollit provident aut debitis accusamus consectetur, at odio tenetur
-      recusandae molestias. Aut veniam distinctio labore enim dolor voluptates,
-      possimus fugiat culpa maxime atque atque. Asperiores optio molestias
-      tempore elit iusto, pariatur dignissimos sunt quos quaerat. Repudiandae
-      anim consectetur non expedita, voluptate anim voluptate excepturi
-      assumenda irure. Sunt quo molestias deserunt velit.
-    </p>
-    <p>
-      Nobis voluptates anim cillum eiusmod et nobis sint, nisi occaecat id
-      adipiscing voluptates voluptatum tempor. Distinctio possimus temporibus id
-      ad eos minima, provident autem voluptatum aliqua. Praesentium fugiat
-      facilis perferendis, sit recusandae ex duis quis. Irure omnis ducimus
-      reiciendis consequat pariatur voluptatum sapiente cillum sapiente,
-      necessitatibus adipiscing rerum tenetur aut. Nam tempor debitis eligendi
-      expedita amet occaecat incididunt, repellendus blanditiis in consectetur
-      cumque velit.
-    </p>
-    <p>
-      Aliquip officia nostrud aut minim veniam mollitia repellat rerum, debitis
-      sunt eiusmod sed dignissimos aliquam ad autem sint deleniti autem. In
-      asperiores consequuntur nulla repudiandae ex. Cupidatat perferendis
-      pariatur tenetur, expedita dolor ducimus. Distinctio ducimus temporibus
-      optio consequuntur officiis nostrud, sequi soluta odio sint eos eiusmod
-      deleniti nam. Praesentium ducimus proident voluptate adipiscing et,
-      deleniti optio occaecat magnam.
-    </p>
-    <p>
-      Minim mollitia velit in mollitia cillum placeat, debitis reiciendis
-      debitis dignissimos corrupti sequi voluptatum sequi quod. Impedit
-      necessitatibus proident occaecat qui, provident anim dolore maiores
-      cupiditate distinctio. Quas tenetur laboris nam, qui minus veniam
-      eligendi. Nulla commodo ut rerum proident, nisi labore.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipiscing elit, obcaecati alias
-      corrupti magna. Saepe accusamus irure et ea commodo soluta irure veniam,
-      atque dolor saepe quia expedita. Dolore aliqua pariatur tempor, nihil
-      culpa quas cupidatat.
-    </p>
-    <p>
-      Mollit provident aut debitis accusamus consectetur, at odio tenetur
-      recusandae molestias. Aut veniam distinctio labore enim dolor voluptates,
-      possimus fugiat culpa maxime atque atque. Asperiores optio molestias
-      tempore elit iusto, pariatur dignissimos sunt quos quaerat. Repudiandae
-      anim consectetur non expedita, voluptate anim voluptate excepturi
-      assumenda irure. Sunt quo molestias deserunt velit.
-    </p>
-    <p>
-      Nobis voluptates anim cillum eiusmod et nobis sint, nisi occaecat id
-      adipiscing voluptates voluptatum tempor. Distinctio possimus temporibus id
-      ad eos minima, provident autem voluptatum aliqua. Praesentium fugiat
-      facilis perferendis, sit recusandae ex duis quis. Irure omnis ducimus
-      reiciendis consequat pariatur voluptatum sapiente cillum sapiente,
-      necessitatibus adipiscing rerum tenetur aut. Nam tempor debitis eligendi
-      expedita amet occaecat incididunt, repellendus blanditiis in consectetur
-      cumque velit.
-    </p>
-    <p>
-      Aliquip officia nostrud aut minim veniam mollitia repellat rerum, debitis
-      sunt eiusmod sed dignissimos aliquam ad autem sint deleniti autem. In
-      asperiores consequuntur nulla repudiandae ex. Cupidatat perferendis
-      pariatur tenetur, expedita dolor ducimus. Distinctio ducimus temporibus
-      optio consequuntur officiis nostrud, sequi soluta odio sint eos eiusmod
-      deleniti nam. Praesentium ducimus proident voluptate adipiscing et,
-      deleniti optio occaecat magnam.
-    </p>
-    <p>
-      Minim mollitia velit in mollitia cillum placeat, debitis reiciendis
-      debitis dignissimos corrupti sequi voluptatum sequi quod. Impedit
-      necessitatibus proident occaecat qui, provident anim dolore maiores
-      cupiditate distinctio. Quas tenetur laboris nam, qui minus veniam
-      eligendi. Nulla commodo ut rerum proident, nisi labore.
-    </p>
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div class="list-group">
+          {
+            allPosts.map((post: any) => (
+              <a href={post.url} class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">{post.frontmatter.title}</h5>
+                  <small class="text-body-secondary">
+                    {post.frontmatter.date}
+                  </small>
+                </div>
+                <p class="mb-1">{post.frontmatter.description}</p>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div class="card">
+          <div class="card-header">mcenahle</div>
+          <div class="card-body">
+            <h5 class="card-title">关于我</h5>
+            <p class="card-text">
+              一个喜欢计算机网络开发的 developer，但不想做程序员。
+            </p>
+            <div class="d-grid gap-1">
+              <a
+                href="https://github.com/mcenahle/"
+                target="_blank"
+                class="btn btn-primary"
+                ><Icon name="mdi:github" /> 访问我的 GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>
