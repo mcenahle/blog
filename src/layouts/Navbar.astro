@@ -5,6 +5,8 @@ const isActive = (path: string) =>
   pathname === path || pathname.startsWith(`${path}/`);
 
 import { Icon } from "astro-icon/components";
+
+import BlogSearch from "../components/BlogSearch.astro";
 ---
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -43,7 +45,10 @@ import { Icon } from "astro-icon/components";
           >
         </li>
       </ul>
-      <span class="navbar-text"> 一个普通人的不定期更新。 </span>
+
+      <form class="d-flex" role="search">
+        <BlogSearch />
+      </form>
     </div>
   </div>
 </nav>
