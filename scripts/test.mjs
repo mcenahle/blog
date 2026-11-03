@@ -1,16 +1,62 @@
-import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import {createMarkdownProcessor} from '@astrojs/markdown-remark';
-import hexoTags from './hexo-tags.mjs';
-const processor=await createMarkdownProcessor({remarkPlugins:[hexoTags]});
-const html=(await processor.render('{% note info modern %}\n**引言**\n正文\n{% endnote %}\n\n{% gallery %}\n![图](/img/test.png)\n{% endgallery %}\n\n```text\n{% note danger %}\n```\n\n<!-- {% note warning %} -->')).code;
-assert.match(html,/<aside class="alert alert-info">/);assert.match(html,/<strong>引言<\/strong>/);assert.match(html,/<div class="hexo-gallery">/);assert.match(html,/src="\/img\/test.png"/);assert.doesNotMatch(html,/alert-danger|alert-warning/);
-const baseline=JSON.parse(fs.readFileSync('baseline/manifest.json','utf8'));const links=[];for(let n=1;n<=7;n++){const html=fs.readFileSync(`dist/${n===1?'':`page/${n}/`}index.html`,'utf8');for(const m of html.matchAll(/<h2[^>]*><a href="([^"]+)"/g))links.push(m[1]);}
-assert.equal(links.length,32);assert.equal(new Set(links).size,32);assert.deepEqual([...links].sort(),baseline.posts.map(p=>p.url).sort());
-assert.match(fs.readFileSync('dist/2026/10/14/474/index.html','utf8'),/日期：2026\/10\/14/);
-assert.equal(JSON.parse(fs.readFileSync('dist/search.json','utf8')).length,32);
-console.log('Passed: Hexo tag boundaries, code/comments preservation, pagination completeness, historical dates, search count.');
-const rss=fs.readFileSync('dist/rss.xml','utf8');const atom=fs.readFileSync('dist/feed.xml','utf8');
-assert.equal((rss.match(/<item>/g)||[]).length,20);assert.equal((rss.match(/<content:encoded>/g)||[]).length,20);assert.match(rss,/今天送给/);assert.match(rss,/https:\/\/blog\.mcenahle\.page\/img\//);assert.doesNotMatch(rss,/\b(?:src|href)=&quot;\//);assert.equal((atom.match(/<content type="html">/g)||[]).length,20);
-const home=fs.readFileSync('dist/index.html','utf8');assert.equal((home.match(/<audio\b/g)||[]).length,1);assert.match(home,/data-astro-transition-persist="music-player"/);
-console.log('Passed: full RSS/Atom entries, absolute feed media URLs, single persistent audio player.');
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import { createMarkdownProcessor } from "@astrojs/markdown-remark";
+import hexoTags from "./hexo-tags.mjs";
+const processor = await createMarkdownProcessor({ remarkPlugins: [hexoTags] });
+const html = (
+  await processor.render(
+    "{% note info modern %}\n**引言**\n正文\n{% endnote %}\n\n{% gallery %}\n![图](/img/test.png)\n{% endgallery %}\n\n```text\n{% note danger %}\n```\n\n<!-- {% note warning %} -->",
+  )
+).code;
+assert.match(html, /<aside class="alert alert-info">/);
+assert.match(html, /<strong>引言<\/strong>/);
+assert.match(html, /<div class="hexo-gallery">/);
+assert.match(html, /src="\/img\/test.png"/);
+assert.doesNotMatch(html, /alert-danger|alert-warning/);
+const baseline = JSON.parse(fs.readFileSync("baseline/manifest.json", "utf8"));
+const links = [];
+for (let n = 1; n <= 7; n++) {
+  const html = fs.readFileSync(
+    `dist/${n === 1 ? "" : `page/${n}/`}index.html`,
+    "utf8",
+  );
+  for (const m of html.matchAll(/<h2[^>]*><a href="([^"]+)"/g))
+    links.push(m[1]);
+}
+assert.equal(links.length, 32);
+assert.equal(new Set(links).size, 32);
+assert.deepEqual([...links].sort(), baseline.posts.map((p) => p.url).sort());
+assert.match(
+  fs.readFileSync("dist/2026/10/14/474/index.html", "utf8"),
+  /日期：2026\/10\/14/,
+);
+assert.equal(
+  JSON.parse(fs.readFileSync("dist/search.json", "utf8")).length,
+  32,
+);
+console.log(
+  "Passed: Hexo tag boundaries, code/comments preservation, pagination completeness, historical dates, search count.",
+);
+const rss = fs.readFileSync("dist/rss.xml", "utf8");
+const atom = fs.readFileSync("dist/feed.xml", "utf8");
+assert.equal((rss.match(/<item>/g) || []).length, 20);
+assert.equal((rss.match(/<content:encoded>/g) || []).length, 20);
+assert.match(rss, /今天送给/);
+assert.match(rss, /https:\/\/blog\.mcenahle\.page\/img\//);
+assert.doesNotMatch(rss, /\b(?:src|href)=&quot;\//);
+assert.equal((atom.match(/<content type="html">/g) || []).length, 20);
+const home = fs.readFileSync("dist/index.html", "utf8");
+assert.equal((home.match(/<audio\b/g) || []).length, 1);
+assert.match(home, /data-astro-transition-persist="music-player"/);
+console.log(
+  "Passed: full RSS/Atom entries, absolute feed media URLs, single persistent audio player.",
+);
+for (const file of ["dist/index.html", "dist/2026/09/05/470/index.html"]) {
+  const html = fs.readFileSync(file, "utf8");
+  const tags = [...html.matchAll(/<script\b[^>]*>/gi)];
+  assert.ok(tags.length > 0);
+  for (const [tag] of tags) assert.match(tag, /^<script data-cfasync="false"/);
+}
+console.log(
+  "Passed: Cloudflare Rocket Loader exclusion for router and page scripts.",
+);

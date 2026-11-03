@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "astro dev --host 127.0.0.1 --port 14567",
-    "build": "astro build && node scripts/verify.mjs",
+    "build": "astro build && node scripts/protect-scripts.mjs && node scripts/verify.mjs",
     "preview": "astro preview --host 127.0.0.1 --port 14567",
     "test": "node scripts/test.mjs"
   },
