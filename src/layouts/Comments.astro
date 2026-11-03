@@ -1,0 +1,14 @@
+<div id="comments"></div>
+<script src="https://unpkg.com/cwd-widget@0.2.1/dist/cwd.js" is:inline></script>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const comments = new window.CWDComments({
+      el: "#comments",
+      apiBaseUrl: "https://api.cwd.mcenahle.page",
+      postSlug: window.location.pathname,
+      siteId: "default",
+    });
+    comments.mount();
+  });
+</script>

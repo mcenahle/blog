@@ -57,6 +57,16 @@ footer {
   }
 }
 
+.post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 12px 0;
+  color: #000000;
+  font-size: 16px;
+}
+
 svg {
-  margin-left: 4px;
+  margin: 0 2px;
 }
