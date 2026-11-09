@@ -18,7 +18,7 @@ import navbar from "./navbar";
  * @see https://theme-plume.vuejs.press/config/theme/
  */
 export default defineThemeConfig({
-  logo: "https://theme-plume.vuejs.press/plume.png",
+  logo: "/favicon.ico",
 
   social: [{ icon: "github", link: "https://mcenahle.dev/gh/" }],
 
@@ -26,7 +26,7 @@ export default defineThemeConfig({
    * @see https://theme-plume.vuejs.press/config/theme/#profile
    */
   profile: {
-    avatar: "https://theme-plume.vuejs.press/plume.png",
+    avatar: "/favicon.ico",
     name: "梅之夏",
     description: "Explore. Dream. Discover.",
   },

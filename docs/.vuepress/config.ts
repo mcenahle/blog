@@ -24,8 +24,8 @@ export default defineUserConfig({
       "link",
       {
         rel: "icon",
-        type: "image/png",
-        href: "https://theme-plume.vuejs.press/favicon-32x32.png",
+        type: "image/ico",
+        href: "/favicon.ico",
       },
     ],
   ],
