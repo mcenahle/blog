@@ -9,22 +9,46 @@
  * 特别的，请不要在两个配置文件中重复配置相同的项，当前文件的配置项会被覆盖
  */
 
-import { viteBundler } from '@vuepress/bundler-vite'
-import { defineUserConfig } from 'vuepress'
-import { plumeTheme } from 'vuepress-theme-plume'
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defineUserConfig } from "vuepress";
+import { plumeTheme } from "vuepress-theme-plume";
 
 export default defineUserConfig({
-  base: '/',
-  lang: 'zh-CN',
-  title: '梅之夏',
-  description: 'Explore. Dream. Discover.',
+  base: "/",
+  lang: "zh-CN",
+  title: "梅之夏",
+  description: "Explore. Dream. Discover.",
 
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "https://theme-plume.vuejs.press/favicon-32x32.png",
+      },
+    ],
   ],
 
   bundler: viteBundler(),
   shouldPrefetch: false,
 
-  theme: plumeTheme(),
-})
+  theme: plumeTheme({
+    readAid: "left",
+    docsRepo: "mcenahle/blog",
+    docsDir: "docs",
+    docsBranch: "feat/plume-migration",
+    contributors: false,
+    llmstxt: {
+      locale: "all",
+      llmsTxtTemplateGetter: {
+        description: (_, { currentLocale }) => {
+          return currentLocale === "/"
+            ? "mcenahle 的主要博客网站"
+            : "A main blog website of mcenahle.";
+        },
+        details: "",
+      },
+    },
+  }),
+});
