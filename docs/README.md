@@ -14,7 +14,10 @@ config:
           text: 博客
           link: /blog/
         - theme: alt
-          text: GitHub →
+          text: 查看博客网站迁移公告 ↗
+          link: https://contents.mcenahle.page/myblog/20261109/
+        - theme: alt
+          text: GitHub ↗
           link: https://mcenahle.dev/gh/blog/
 title: Home
 ---
