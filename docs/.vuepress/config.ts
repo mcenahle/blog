@@ -38,6 +38,7 @@ export default defineUserConfig({
     bulletin: {
       enablePage: false,
     },
+    autoFrontmatter: false,
     docsRepo: "mcenahle/blog",
     docsDir: "docs",
     docsBranch: "feat/plume-migration",

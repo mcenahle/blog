@@ -17,5 +17,5 @@ export default defineNavbarConfig([
       { text: "归档", link: "/blog/archives/" },
     ],
   },
-  { text: "友情链接", link: "/links/" },
+  { text: "友情链接", link: "/links/README.md" },
 ]);

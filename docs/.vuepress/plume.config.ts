@@ -31,12 +31,6 @@ export default defineThemeConfig({
     description: "Explore. Dream. Discover.",
   },
 
-  autoFrontmatter: {
-    title: false,
-    createTime: false,
-    permalink: false,
-  },
-
   navbar,
   collections,
 });
