@@ -1,42 +1,32 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
-  "private": true,
+  "name": "梅之夏",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Explore. Dream. Discover.",
+  "packageManager": "pnpm@10.27.0",
+  "author": "mcenahle <webmaster@mcenahle.edu.pl>",
+  "license": "MIT",
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server",
-    "quick": "hexo clean && hexo g && hexo server -p 80",
-    "ips": "hexo clean && hexo g && powershell -Command \"$ip=(Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.InterfaceAlias -like '*WLAN*'} | Select-Object -First 1 -ExpandProperty IPAddress); Write-Host ''; Write-Host 'Feed URL:' http://$ip/feed.xml; Write-Host 'Site URL:' http://$ip/; Write-Host ''\" && hexo server --host 0.0.0.0 -p 80"
+    "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:dev": "vuepress dev docs",
+    "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
+    "docs:preview": "http-server docs/.vuepress/dist",
+    "vp-update": "pnpm dlx vp-update"
   },
-  "hexo": {
-    "version": "7.3.0"
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.31",
+    "http-server": "^14.1.1",
+    "typescript": "^6.0.3",
+    "vue": "^3.5.43",
+    "vuepress": "2.0.0-rc.31",
+    "vuepress-theme-plume": "1.0.0-rc.215"
   },
-  "dependencies": {
-    "hexo": "^7.0.0",
-    "hexo-abbrlink": "^2.2.1",
-    "hexo-bilibili-bangumi": "^2.1.9",
-    "hexo-butterfly-charts": "^1.1.6",
-    "hexo-filter-nofollow": "^2.0.2",
-    "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-category": "^2.0.0",
-    "hexo-generator-feed": "^4.0.0",
-    "hexo-generator-index": "^3.0.0",
-    "hexo-generator-search": "^2.4.3",
-    "hexo-generator-sitemap": "^3.0.1",
-    "hexo-generator-tag": "^2.0.0",
-    "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^6.0.0",
-    "hexo-renderer-pug": "^3.0.0",
-    "hexo-renderer-sass": "^0.5.0",
-    "hexo-renderer-stylus": "^3.0.1",
-    "hexo-robots": "^1.0.4",
-    "hexo-server": "^3.0.0",
-    "hexo-server-live": "^0.2.12",
-    "hexo-tag-map": "^1.2.1",
-    "hexo-tag-steamgame": "^1.0.0",
-    "hexo-theme-landscape": "^1.0.0",
-    "hexo-wordcount": "^6.0.1"
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher"
+    ]
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
   }
 }
