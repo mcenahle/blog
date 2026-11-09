@@ -35,6 +35,9 @@ export default defineUserConfig({
 
   theme: plumeTheme({
     readAid: "left",
+    bulletin: {
+      enablePage: false,
+    },
     docsRepo: "mcenahle/blog",
     docsDir: "docs",
     docsBranch: "feat/plume-migration",
