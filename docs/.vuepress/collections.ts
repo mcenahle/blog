@@ -24,26 +24,23 @@
  *
  * 通过 `defineCollection` 定义的 collection 配置，应该填入 `defineCollections` 中
  */
-import { defineCollection, defineCollections } from 'vuepress-theme-plume'
+import { defineCollection, defineCollections } from "vuepress-theme-plume";
 
 const blog = defineCollection({
-  type: 'post',
-  dir: 'blog',
-  title: 'Blog',
-  link: '/blog/',
-})
+  type: "post",
+  dir: "blog",
+  title: "博客",
+  link: "/blog/",
+});
 
 const demoDoc = defineCollection({
-  type: 'doc',
-  dir: 'demo',
-  linkPrefix: '/demo',
-  title: 'Demo',
-  sidebar: ['', 'foo', 'bar'],
+  type: "doc",
+  dir: "demo",
+  linkPrefix: "/demo",
+  title: "Demo",
+  sidebar: ["", "foo", "bar"],
   // 根据文件结构自动生成侧边栏
   // sidebar: 'auto',
-})
+});
 
-export default defineCollections([
-  blog,
-  demoDoc,
-])
+export default defineCollections([blog, demoDoc]);
