@@ -1,5 +1,5 @@
 ---
-pageLayout: friends
+pageLayout: "friends"
 title: 友情链接
 cols: 2
 list:
