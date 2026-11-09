@@ -30,6 +30,7 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "dependencies": {
-    "@vuepress/plugin-llms": "2.0.0-rc.137"
+    "@vuepress/plugin-llms": "2.0.0-rc.137",
+    "cwd-widget": "^0.2.2"
   }
 }
