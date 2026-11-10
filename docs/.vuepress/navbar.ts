@@ -17,4 +17,12 @@ export default defineNavbarConfig([
     ],
   },
   { text: "友情链接", link: "/links/README.md" },
+  {
+    text: "订阅网站",
+    items: [
+      { text: "atom", link: "atom.xsl" },
+      { text: "json", link: "feed.json" },
+      { text: "rss", link: "rss.xml" },
+    ],
+  },
 ]);
