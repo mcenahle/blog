@@ -12,6 +12,7 @@
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 import { plumeTheme } from "vuepress-theme-plume";
+import { redirectPlugin } from "@vuepress/plugin-redirect";
 
 export default defineUserConfig({
   base: "/",
@@ -55,4 +56,12 @@ export default defineUserConfig({
       },
     },
   }),
+
+  plugins: [
+    redirectPlugin({
+      config: {
+        "/posts/": "/",
+      },
+    }),
+  ],
 });

@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@vuepress/plugin-llms": "2.0.0-rc.137",
+    "@vuepress/plugin-redirect": "2.0.0-rc.137",
     "cwd-widget": "^0.2.2",
     "three": "^0.187.0"
   }
