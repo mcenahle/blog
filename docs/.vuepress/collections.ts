@@ -30,7 +30,7 @@ const blog = defineCollection({
   type: "post",
   dir: "blog",
   title: "博客",
-  link: "/blog/",
+  link: "/",
 });
 
 const demoDoc = defineCollection({
