@@ -53,6 +53,11 @@ export default defineUserConfig({
     docsDir: "docs",
     docsBranch: "feat/plume-migration",
     contributors: false,
+    footer: {
+      copyright: "Copyright © 2024-2026 梅之夏.",
+      message:
+        "<a href='https://validator.w3.org/feed/check.cgi?url=https%3A//bp.mcenahle.dev/feed.xml' target='_blank'><img src='/img/valid-rss-rogers.png' alt='[Valid RSS]' style='display: inline; width: 70px;' title='Validate my RSS feed' /></a><br />Powered by <a target='_blank' href='https://v2.vuepress.vuejs.org/'>VuePress</a> &amp; <a target='_blank' href='https://theme-plume.vuejs.press'>vuepress-theme-plume</a>",
+    },
     llmstxt: {
       locale: "all",
       llmsTxtTemplateGetter: {
