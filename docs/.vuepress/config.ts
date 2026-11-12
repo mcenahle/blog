@@ -43,6 +43,11 @@ export default defineUserConfig({
     feed: {
       formats: ["rss", "atom", "json"],
     },
+    relatedPosts: {
+      limit: 4,
+      minScore: 0.12,
+      diversity: 0.3,
+    },
     autoFrontmatter: false,
     docsRepo: "mcenahle/blog",
     docsDir: "docs",
