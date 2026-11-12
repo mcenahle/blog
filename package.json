@@ -19,7 +19,7 @@
     "typescript": "^6.0.3",
     "vue": "^3.5.43",
     "vuepress": "2.0.0-rc.31",
-    "vuepress-theme-plume": "1.0.0-rc.215"
+    "vuepress-theme-plume": "1.0.0-rc.216"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -30,7 +30,6 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "dependencies": {
-    "@vuepress/plugin-feed": "2.0.0-rc.137",
     "@vuepress/plugin-llms": "2.0.0-rc.137",
     "@vuepress/plugin-redirect": "2.0.0-rc.137",
     "cwd-widget": "^0.2.2",

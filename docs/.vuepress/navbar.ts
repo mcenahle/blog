@@ -20,9 +20,10 @@ export default defineNavbarConfig([
   {
     text: "订阅网站",
     items: [
-      { text: "atom", link: "atom.xsl" },
-      { text: "json", link: "feed.json" },
-      { text: "rss", link: "rss.xml" },
+      { text: "atom", link: "/atom.xml" },
+      { text: "json", link: "/feed.json" },
+      { text: "rss", link: "/feed.xml" },
     ],
   },
+  { text: "站点地图", link: "/sitemap.xml" },
 ]);

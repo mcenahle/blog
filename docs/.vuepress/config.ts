@@ -13,7 +13,6 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 import { plumeTheme } from "vuepress-theme-plume";
 import { redirectPlugin } from "@vuepress/plugin-redirect";
-import { feedPlugin } from "@vuepress/plugin-feed";
 
 export default defineUserConfig({
   base: "/",
@@ -40,6 +39,10 @@ export default defineUserConfig({
     bulletin: {
       enablePage: false,
     },
+    hostname: "https://bp.mcenahle.dev",
+    feed: {
+      formats: ["rss", "atom", "json"],
+    },
     autoFrontmatter: false,
     docsRepo: "mcenahle/blog",
     docsDir: "docs",
@@ -63,14 +66,6 @@ export default defineUserConfig({
       config: {
         "/posts/": "/",
       },
-    }),
-    feedPlugin({
-      hostname: "https://bp.mcenahle.dev",
-      atom: true,
-      json: true,
-      rss: true,
-      devServer: true,
-      devHostname: "http://localhost:8888",
     }),
   ],
 });
