@@ -1,5 +1,21 @@
+node_modules/
+dist/
+.astro/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+.DS_Store
+artifacts/
+
+# Temporary pull-request comparison checkout
+.visual-baseline/
+
 .idea
 node_modules
 db.json
 public
 .vscode
+
+之前的博客网站的备份/
