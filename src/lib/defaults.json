@@ -90,7 +90,7 @@
       "cover": ["/img/default.avif"],
       "locate": "China",
       "copyright": {
-        "enable": true,
+        "enable": false,
         "author": "/img/logo.png",
         "author_background": "",
         "license": "CC BY-NC-SA 4.0",
