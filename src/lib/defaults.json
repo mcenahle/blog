@@ -2,7 +2,7 @@
   "site": {
     "name": {
       "class": "text",
-      "custom": "Solitude"
+      "custom": "梅之夏"
     },
     "icon": "/img/logo.png"
   },
@@ -82,16 +82,12 @@
       "async_threshold": 200
     },
     "default": {
-      "cover": [
-        "/img/default.avif"
-      ]
+      "cover": ["/img/default.avif"]
     }
   },
   "post": {
     "default": {
-      "cover": [
-        "/img/default.avif"
-      ],
+      "cover": ["/img/default.avif"],
       "locate": "China",
       "copyright": {
         "enable": true,
@@ -162,9 +158,7 @@
   },
   "right_menu": {
     "enable": true,
-    "exclude": [
-      "music"
-    ],
+    "exclude": ["music"],
     "commentBarrage": false,
     "ctrlOriginalMenu": false,
     "translate": false,

@@ -14,8 +14,6 @@ artifacts/
 
 .idea
 node_modules
-db.json
-public
 .vscode
 
 之前的博客网站的备份/

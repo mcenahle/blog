@@ -1,29 +1,28 @@
 import { defineSolitudeConfig } from './lib/config';
 
 export default defineSolitudeConfig({
-  site: 'https://example.org',
-  title: 'Solitude',
-  description:
-    'Write and create with Astro. A thoughtful home for your stories.',
-  locale: 'en',
-  timeZone: 'UTC',
-  author: { name: 'Solitude' },
+  site: 'https://solitude.blog.mcenahle.dev',
+  title: '梅之夏',
+  description: 'Explore. Dream. Discover.',
+  locale: 'zh-CN',
+  timeZone: 'Asia/Shanghai',
+  author: { name: 'mcenahle' },
   menus: [
     {
-      name: 'Library',
+      name: '博客统计',
       children: [
-        { name: 'All posts', url: '/archives/', icon: 'fas fa-folder-closed' },
-        { name: 'Categories', url: '/categories/', icon: 'fas fa-clone' },
-        { name: 'Tags', url: '/tags/', icon: 'fas fa-tags' },
+        { name: '存档', url: '/archives/', icon: 'fas fa-folder-closed' },
+        { name: '分类', url: '/categories/', icon: 'fas fa-clone' },
+        { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
       ],
     },
-    { name: 'Friends', url: '/links/' },
+    { name: '友情链接', url: '/links/' },
     {
-      name: 'Explore',
+      name: '探索更多',
       children: [
-        { name: 'About the theme', url: '/about/' },
-        { name: 'My equipment', url: '/equipment/' },
-        { name: 'Short updates', url: '/brevity/' },
+        { name: '关于我', url: '/about/' },
+        { name: '我的设备', url: '/equipment/' },
+        { name: '即刻短文', url: '/brevity/' },
       ],
     },
   ],
@@ -68,24 +67,29 @@ export default defineSolitudeConfig({
         left: [
           {
             name: 'GitHub',
-            url: 'https://github.com/everfu/astro-solitude',
+            url: 'https://github.com/mcenahle/blog',
             icon: 'fab fa-github',
           },
         ],
-        right: [{ name: 'RSS', url: '/index.xml', icon: 'fas fa-rss' }],
+        right: [{ name: 'RSS', url: '/feed.xml', icon: 'fas fa-rss' }],
       },
       group: {
-        Explore: [
-          { name: 'Posts', url: '/archives/' },
-          { name: 'Categories', url: '/categories/' },
+        统计: [
+          { name: '存档', url: '/archives/' },
+          { name: '分类', url: '/categories/' },
         ],
-        About: [
-          { name: 'Theme', url: '/about/' },
-          { name: 'Friends', url: '/links/' },
+        关于: [
+          { name: '关于我', url: '/about/' },
+          { name: '友情链接', url: '/links/' },
         ],
       },
     },
-    capsule: { enable: true, id: '7298728834454061071', type: 'playlist', server: 'qishui' },
+    capsule: {
+      enable: true,
+      id: '7298728834454061071',
+      type: 'playlist',
+      server: 'qishui',
+    },
     // See docs/integrations.md to configure a playlist or enable comments.
     post: {
       meta: { locate: false },
