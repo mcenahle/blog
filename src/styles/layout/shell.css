@@ -185,7 +185,7 @@ span.tags-punctuation i {
   line-height: 1.7;
   font-weight: 400;
   margin: 0.5rem 0;
-  text-align: justify;
+  /* text-align: justify; */
   letter-spacing: 0.6px;
 }
 
