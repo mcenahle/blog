@@ -9,7 +9,7 @@
   },
   "packageManager": "pnpm@11.24.0",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "check": "pnpm check:scripts && pnpm check:astro",
