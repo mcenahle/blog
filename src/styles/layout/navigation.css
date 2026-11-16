@@ -263,6 +263,7 @@
 }
 
 #page-header.nav-fixed #nav #nav-right {
+  background: linear-gradient(to bottom, var(--efu-maskbg), var(--efu-maskbgdeep));
   box-shadow: var(--efu-shadow-glass);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
@@ -479,7 +480,7 @@
 }
 
 #nav #site-name {
-  padding: 0;
+  padding: 12px;
   transition: 0.3s;
   height: 35px;
   min-width: 50px;
