@@ -2,6 +2,7 @@
 title: 2025年终总结
 url: /2025/12/2025-annual/
 date: 2025-12-24 19:00:00
+not_cover: true
 categories: [年终总结]
 tags: [去月球, 医疗, 性格]
 description: 又是一年过去了......
