@@ -26,4 +26,22 @@ export default defineNavbarConfig([
     ],
   },
   { text: "站点地图", link: "/sitemap.xml" },
+  {
+    text: "加入的博客组织",
+    items: [
+      { text: "开往", link: "https://www.travellings.cn/go" },
+      { text: "blogsclub", link: "https://www.blogsclub.org/" },
+      { text: "博友圈", link: "https://www.boyouquan.com/" },
+      { text: "BLOGS·CN", link: "https://blogscn.fun/" },
+      { text: "十年之约", link: "https://www.foreverblog.cn/" },
+      { text: "无聊湾", link: "https://boringbay.com/" },
+      { text: "博客录", link: "https://boke.lu/" },
+      { text: "集博栈", link: "https://www.heyblog.net/" },
+      { text: "博客大联盟", link: "https://bo.ke/" },
+      {
+        text: "中文独立博客列表",
+        link: "https://github.com/timqian/chinese-independent-blogs",
+      },
+    ],
+  },
 ]);
