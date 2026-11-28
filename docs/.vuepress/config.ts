@@ -48,6 +48,7 @@ export default defineUserConfig({
       minScore: 0.12,
       diversity: 0.3,
     },
+    readerPreferences: true,
     autoFrontmatter: false,
     docsRepo: "mcenahle/blog",
     docsDir: "docs",
