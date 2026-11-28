@@ -14,12 +14,12 @@
     "vp-update": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.31",
+    "@vuepress/bundler-vite": "2.0.0-rc.33",
     "http-server": "^14.1.1",
     "typescript": "^6.0.3",
-    "vue": "^3.5.43",
-    "vuepress": "2.0.0-rc.31",
-    "vuepress-theme-plume": "1.0.0-rc.216"
+    "vue": "^3.5.46",
+    "vuepress": "2.0.0-rc.33",
+    "vuepress-theme-plume": "1.0.0-rc.219"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -30,8 +30,8 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "dependencies": {
-    "@vuepress/plugin-llms": "2.0.0-rc.137",
-    "@vuepress/plugin-redirect": "2.0.0-rc.137",
+    "@vuepress/plugin-llms": "2.0.0-rc.142",
+    "@vuepress/plugin-redirect": "2.0.0-rc.142",
     "cwd-widget": "^0.2.2",
     "three": "^0.187.0"
   }
